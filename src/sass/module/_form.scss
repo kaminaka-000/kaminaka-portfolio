@@ -1,0 +1,141 @@
+@use "global" as *;
+
+.form__wrap {
+    border-bottom: 1px dashed $accent-green;
+    padding: rem(24) 0;
+    @include mq(md){
+        display: flex;
+        padding: rem(39) 0;
+    }
+}
+
+.form__wrap:first-child {
+    padding: 0 0 rem(24) 0;
+    @include mq(md){
+        padding: 0 0 rem(40) 0;
+    }
+}
+
+.form__wrap.form__wrap--textarea {
+    @include mq(md){
+        align-items: flex-start;
+    }
+}
+
+.form__label {
+    font-size: rem(16);
+    font-weight: $bold;
+    @include mq(md){
+        max-width: rem(220);
+        width: 100%;
+    }
+}
+
+.form__wrap.form__wrap--textarea .form__label {
+    @include mq(md){
+        margin-top: rem(10);
+    }
+}
+
+.form__label span {
+    margin-left: rem(8);
+    padding: rem(2) rem(16);
+    display: inline-block;
+    font-size: rem(12);
+    font-weight: $normal;
+    color: $white;
+    letter-spacing: rem(4.8);
+    background-color: #C94800;
+}
+
+.form__input,
+.form__select,
+.form__radio,
+.form__checkbox,
+.form__textarea {
+    margin-top: rem(12);
+    @include mq(md){
+        margin-top: 0;
+    }
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+    flex-grow: 1;
+}
+
+.form__agreement {
+    margin-top: rem(40);
+    padding: 0 rem(31);
+    @include mq(md){
+        text-align: center;
+        padding: 0;
+        margin-top: rem(80);
+    }
+}
+
+.form__agreement input + span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 0 0 rem(30);
+    position: relative;
+    font-size: rem(14);
+}
+
+.form__agreement input + span::before {
+    content: "";
+    position: absolute;
+    top: 22%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid $accent-green;
+    display: block;
+    width: rem(22);
+    height: rem(22);
+    @include mq(md){
+        top: 50%;
+    }
+}
+
+.form__agreement input + span::after {
+    content: "";
+    margin-top: rem(-2);
+    position: absolute;
+    top: 21%;
+    left: rem(3);
+    transform: translateY(-50%) rotate(-45deg);
+    display: block;
+    width: rem(15);
+    height: rem(8);
+    border-bottom: rem(3) solid #C94800;
+    border-left: rem(3) solid #C94800;
+    transition:  .3s;
+    opacity: 0;
+    @include mq(md){
+        top: 50%;
+    }
+}
+
+.form__agreement input:checked + span::after {
+    opacity: 1;
+}
+
+.form__button {
+    margin-top: rem(24);
+    text-align: center;
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+
+//modifier
+.form__wrap--campaign {
+    @include mq(md){
+        align-items: center;
+    }
+}
+
+

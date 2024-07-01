@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.archive-item__past {
+    font-size: rem(24);
+    color: $accent-green;
+    font-weight: $normal;
+    margin-left: rem(6);
+}
+
+.archive-item__past::before,
+.archive-item__link::before {
+    content: "";
+    display: inline-block;
+    margin-right: rem(8);
+    transition: transform 0.4s ease-in-out;
+    transform-origin: 50% 50%;
+    border-top: rem(10) solid transparent;
+    border-bottom: rem(10) solid transparent;
+    border-left: rem(18) solid #408F95;
+}
+
+.archive-item__months {
+    display: none;
+}
+
+.archive-item__past--active::before {
+    transform: rotate(90deg);
+}
+
+.archive-item__link {
+    margin-left: rem(24);
+    font-size: rem(24);
+    color: $accent-green;
+    font-weight: $normal;
+    margin-top: rem(4);
+}
+
+.archive-item__past--inactive::before {
+    opacity: 0;
+}
+
+.archive-item__past--active::before {
+    opacity: 1;
+}

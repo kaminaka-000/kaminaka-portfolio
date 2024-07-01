@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.testimonial-list {
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(72) rem(40);
+    }
+}
+
+.testimonial-list__content {
+    margin:rem(40) auto;
+    @include mq(md){
+        margin-top: rem(80);
+    }
+}
+
+.testimonial-list__text {
+    font-size: rem(16);
+    text-align: center;
+    @include mq(md){
+        font-size: rem(24);
+    }
+
+}

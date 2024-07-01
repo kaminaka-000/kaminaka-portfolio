@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.sidebar__list {
+    max-width: none;
+    @include mq(md){
+        max-width: rem(294);
+        width: 100%;
+    }
+}
+
+.sidebar__item {
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
+.sidebar__item + .sidebar__item {
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.sidebar__container {
+    display: flex;
+    align-items: center;
+    border-left: rem(8) solid $accent-green;
+}
+
+.sidebar__container img {
+    max-width: rem(50);
+    width: 100%;
+    margin-left: rem(16);
+}
+
+.sidebar__sidebar-title {
+    margin-left: rem(8);
+    font-size: rem(24);
+    font-weight: $normal;
+}
+
+.sidebar__popular {
+    margin-top: rem(24);
+}
+
+.sidebar__review {
+    margin-top: rem(24);
+}
+
+.sidebar__cards {
+    margin-top: rem(24);
+}
+
+.sidebar__archive {
+    margin-top: rem(24);
+}
+
+.sidebar-archive__item + .sidebar-archive__item {
+    margin-top: rem(4);
+}

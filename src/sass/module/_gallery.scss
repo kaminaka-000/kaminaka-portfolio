@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.gallery__inner {
+    max-width: rem(600);
+    width: 100%;
+}
+
+.gallery__list {
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+

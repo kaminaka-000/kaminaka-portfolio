@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.sub-mv{
+    position: relative;
+}
+
+.sub-mv__img img {
+  aspect-ratio: 375 / 460;
+  width: 100%;
+  height: rem(460);
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 1440 / 548;
+    height: rem(548);
+  }
+}
+
+.sub-mv__header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: $white;
+  text-align: center;
+  font-family: $second-font-family;
+  line-height: 1;
+  @include mq(md){
+    transform: translate(-50%, 8%);
+  }
+}
+
+.sub-mv__title {
+  font-size: rem(40);
+  font-weight: $normal;
+  @include mq(md) {
+    font-size: rem(80);
+  }
+}

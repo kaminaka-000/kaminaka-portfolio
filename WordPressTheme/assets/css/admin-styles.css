@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* ダッシュボード */
+a {
+  text-decoration: none;
+}
+
+/* 編集と投稿ウィジェット　のスタイル */
+.admin_panel {
+  text-align: center;
+  font-weight: bold;
+}
+
+.widget-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列に設定 */
+  gap: 20px;
+}
+
+.widget-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.widget-icon:hover {
+  background-color: #e0e0e0;
+}
+
+.widget-icon span {
+  font-size: 60px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  width: auto;
+}
+
+.widget-icon p {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+/* 基本設定ウィジェットのスタイル */
+.basic_settings_widget .widget-links {
+  list-style: none;
+  padding: 0;
+}
+
+.basic_settings_widget .widget-links li {
+  margin-bottom: 10px;
+}
+
+.basic_settings_widget .widget-icon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+
+.basic_settings_widget .widget-icon span {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.basic_settings_widget .widget-icon p {
+  margin-top: 15px;
+  padding: 0;
+}
+
+.basic_settings_widget .widget-icon:hover {
+  opacity: 0.6;
+}
+
+
+

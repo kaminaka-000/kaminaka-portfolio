@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.to-top {
+    position: fixed;
+    bottom: rem(20);
+    right: rem(24);
+    z-index: 99;
+    @include mq(md){
+        right: rem(18);
+    }
+}
+
+.to-top img {
+    max-width: rem(50);
+    width: 100%;
+    @include mq(md){
+        max-width: rem(85);
+    }
+}

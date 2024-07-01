@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.wpcf7 form .wpcf7-response-output {
+  border: none;
+}
+
+.wpcf7-response-output {
+  font-size: rem(14);
+  font-weight: $normal;
+  color: #C94800;
+  text-align: center;
+}
+
+//フォームエラー
+.wpcf7-form-control-wrap > .wpcf7-not-valid-tip {
+  display: none;
+  margin-top: rem(10);
+}
+
+.wpcf7-form-control-wrap.is-show > .wpcf7-not-valid-tip {
+  display: block;
+}
+
+/* テキスト、メール、電話番号フィールド,チェックボックスのスタイル */
+.wpcf7-form-control-wrap.is-show .custom-input.wpcf7-not-valid,
+.wpcf7-form-control-wrap.is-show .custom-textarea.wpcf7-not-valid {
+  border: 1px solid #C94800;
+  background: rgba(201, 72, 0, 0.20);
+}
+
+.wpcf7-form-control-wrap.is-show .custom-input.wpcf7-not-valid::placeholder {
+  color: #fff;
+}
+
+.wpcf7-form-control-wrap.is-show .wpcf7-not-valid .wpcf7-list-item input[type="checkbox"] + span::before {
+  border: 1px solid #C94800;
+  background: rgba(201, 72, 0, 0.20);
+}

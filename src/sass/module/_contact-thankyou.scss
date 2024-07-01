@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.contact-thankyou__inner {
+    max-width: rem(600);
+    width: 100%;
+    padding: 0 rem(15);
+    margin-inline: auto;
+    @include mq(md){
+        max-width: rem(672);
+        padding: 0 rem(25);
+    }
+}
+
+.contact-thankyou p {
+    text-align: center;
+    line-height: 1.5;
+    font-size: rem(16);
+    font-weight: $normal;
+    max-width: rem(345);
+    width: 100%;
+    margin-inline: auto;
+    @include mq(md){
+        max-width: none;
+    }
+}
+
+.contact-thankyou p:nth-child(2) {
+    margin-top: rem(30);
+}

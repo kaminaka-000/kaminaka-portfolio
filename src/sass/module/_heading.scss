@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.heading {
+    text-align: center;
+}
+
+.heading__engtitle {
+    font-family: $accent-font-family;
+    font-size: rem(32);
+    line-height: 1.25;
+    font-weight: $normal;
+    @include mq(md){
+        font-size: rem(40);
+        line-height: 1;
+    }
+}
+
+.heading__engtitle::first-letter {
+    color: $accent-green;
+}
+
+.heading__engtitle--blog::first-letter {
+    @include mq(md){
+        color: $white;
+    }
+}
+
+.heading__jatitle {
+    font-size: rem(12);
+    line-height: 1.5;
+    color: $accent-green;
+    margin-top: rem(4);
+    @include mq(md){
+        margin-top: rem(8);
+    }
+}
+
+//modifier
+.heading--blog,
+.heading__engtitle--blog span,
+.heading__jatitle--blog {
+    @include mq(md){
+        color: $white;
+    }
+}
+
+.heading .heading__engtitle--contact {
+    font-size: rem(80);
+    line-height: 0.8;
+    @include mq(md){
+        font-size: rem(80);
+        line-height: 1;
+    }
+}
+
+.heading .heading__jatitle--contact {
+    margin-top: 0;
+    font-size: rem(12);
+}
+
+.heading__engtitle--sub {
+    line-height: 1;
+}

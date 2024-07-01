@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.sub-campaign__inner {
+  max-width: rem(600);
+  padding: 0 rem(15);
+}
+
+.sub-campaign__cards {
+  margin-top: rem(40);
+}

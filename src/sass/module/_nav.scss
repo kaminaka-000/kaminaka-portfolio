@@ -1,0 +1,137 @@
+@use "global" as *;
+
+.nav__inner {
+  max-width: rem(375);
+  width: 100%;
+  padding: 0 rem(15);
+  margin-inline: auto;
+  height: 100%;
+  overflow: scroll;
+}
+
+.nav__area {
+  padding-bottom: rem(104);
+  gap: 0;
+  width: rem(330);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.nav__section:nth-child(2) {
+  @include mq(md){
+    margin-left: rem(102);
+  }
+}
+
+.nav__section:nth-child(3),
+.nav__section:nth-child(4) {
+  @include mq(md){
+    margin-left: rem(88);
+  }
+}
+
+.nav__content {
+  margin-top: rem(40);
+}
+
+.nav__content:first-child {
+  @include mq(md){
+    margin-top: rem(29);
+  }
+}
+
+.nav__items {
+  @include mq(md) {
+    width: rem(182);
+  }
+}
+
+.nav__item + .nav__item {
+  margin-top: rem(24);
+  margin-left: rem(24);
+}
+
+.nav__item a {
+  display: block;
+  font-size: rem(16);
+  line-height: 1.125;
+  color: $white;
+  font-weight: 400;
+  transition: all 0.3s ease 0s;
+}
+
+.nav__item a:hover {
+	opacity: 0.6;
+}
+
+.nav__item a span {
+  font-weight: $bold;
+  display: block;
+}
+
+.nav__item a span:hover {
+  opacity: 0.6;
+}
+
+.nav__item-wrapper {
+  display: flex;
+  gap: rem(4);
+}
+
+.nav__item-wrapper::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../images/common/starfish-icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: rem(18);
+  width: 100%;
+  height: rem(18);
+}
+
+.nav__item-img {
+  max-width: rem(18);
+  width: 100%;
+}
+
+//modifier
+.nav__inner--footer {
+  overflow: visible;
+  height: auto;
+  padding: 0;
+  @include mq(md){
+    max-width: none;
+  }
+}
+
+.nav__area--footer {
+  gap: 0 rem(6);
+  padding-bottom: rem(0);
+  width: rem(345);
+  @include mq(md) {
+    display: flex;
+    gap: 0;
+  }
+}
+
+.nav__area--sitemap {
+  gap: 0 rem(25);
+  @include mq(md){
+    max-width: rem(1130);
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.nav--sitemap .nav__item a {
+  color: $green;
+}
+
+.nav__item-wrapper--sitemap::before {
+  background-image: url(../images/common/sitemap-starfish.svg);
+}

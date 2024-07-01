@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.sub-information__inner {
+    max-width: rem(600);
+    width: 100%;
+}
+
+.sub-information__info-tab  {
+    margin-top: rem(16);
+    @include mq(md){
+        margin-top: rem(24);
+    }
+}
+
+
+

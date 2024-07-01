@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.sidebar-popular a {
+    min-width: 0;
+    @include mq(md){
+        min-width: rem(292);
+    }
+}
+
+.sidebar-popular a:hover {
+    opacity: 0.6;
+}
+
+.sidebar-popular__item + .sidebar-popular__item {
+    margin-top: rem(24);
+}

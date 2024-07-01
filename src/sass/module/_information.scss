@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.information {
+    background-color: $pale-blue;
+    padding: rem(80) 0;
+    @include mq(md){
+        padding: rem(100) 0 rem(76);
+    }
+}
+
+.information__inner {
+    max-width: rem(600);
+    width: 100%;
+    margin-inline: auto;
+}
+
+.information__course {
+    margin-top: rem(32);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}

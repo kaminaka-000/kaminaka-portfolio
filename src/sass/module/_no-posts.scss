@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.no-posts__text {
+  font-size: rem(16);
+  text-align: center;
+  @include mq(md){
+      font-size: rem(24);
+  }
+}
+
+//modifier
+.no-posts__text--faq {
+  margin-top: rem(40);
+  @include mq(md){
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.info-tab__item {
+    padding: rem(22) rem(22) rem(22) rem(24);
+    display: none;
+    border: 1px solid $accent-green;
+    @include mq(md){
+        padding: rem(24);
+    }
+}
+
+.info-tab__item.is-active {
+    display: block;
+    animation: fade .3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.info-tab__wrapper {
+    @include mq(md){
+        display: flex;
+        align-items: center;
+        gap: rem(58);
+    }
+}
+
+.info-tab__box {
+    @include mq(md){
+        width: 47%;
+    }
+}
+
+.info-tab__title {
+    font-size: rem(24);
+    font-weight: $bold;
+    line-height: 1;
+    border-bottom: 1px solid $accent-green;
+    padding-bottom: rem(8);
+}
+
+.info-tab__text {
+    margin-top: rem(8);
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: 1.5;
+}
+
+.info-tab__img {
+    margin-top: rem(8);
+    aspect-ratio: 297/189;
+    @include mq(md){
+        width: 47%;
+    }
+}
+
+.info-tab__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.footer {
+  background-color: $accent-green;
+  padding-top: rem(48);
+  padding-bottom: rem(56);
+  @include mq(md){
+    padding-top: rem(76);
+    padding-bottom: rem(80);
+  }
+}
+
+.footer__inner {
+  max-width: rem(600);
+  width: 100%;
+  margin-inline: auto;
+}
+
+.footer__group {
+  @include mq(md) {
+    display: flex;
+    gap: rem(40);
+    align-items: end;
+    height: rem(75);
+  }
+}
+
+.footer__logo {
+  max-width: rem(120);
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  @include mq(md) {
+    max-width: rem(200);
+  }
+}
+
+.footer__logo:hover {
+  opacity: 0.6;
+}
+
+.footer__icons {
+  display: flex;
+  gap: rem(16);
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.footer__icon {
+  transition: all 0.3s ease 0s;
+}
+
+.footer__icon img {
+  width: rem(24);
+  @include mq(md){
+    width: rem(32);
+  }
+}
+
+.footer__icon:hover {
+  opacity: 0.6;
+}
+
+.footer__copyright {
+  text-align: center;
+  color: $white;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(77);
+  }
+}
+
+.footer__copyright small {
+  display: inline-block;
+  font-size: rem(12);
+  line-height: 1.5;
+  font-weight: $normal;
+  letter-spacing: 0.033em;
+  @include mq(md){
+    font-size: rem(14);
+    line-height: 1.28571;
+  }
+}
+
+//modifier
+.footer--contact-thankyou {
+  margin-top: rem(144);
+  @include mq(md){
+    margin-top: rem(120);
+  }
+}

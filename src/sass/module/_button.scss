@@ -1,0 +1,97 @@
+@use "global" as *;
+
+.button {
+    position: relative;
+    display: inline-block;
+    background-color: $accent-green;
+    padding: rem(15) rem(88) rem(16) rem(40);
+    border: 1px solid $accent-green;
+    color: $white;
+    font-size: rem(14);
+    font-family: $accent-font-family;
+    z-index: 1;
+    margin-bottom: rem(4);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    transition: width 0.3s ease;
+    top: rem(4);
+    left: rem(4);
+    width: 100%;
+    height: 100%;
+    border: 1px solid $accent-green;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: $white;
+    transition: 0.3s;
+    left: 0;
+    z-index: -1;
+}
+
+.button:hover::after {
+    width: 100%;
+}
+
+.button span::after {
+    content: "";
+    position: absolute;
+    margin-left: rem(8);
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(40);
+    height: rem(6);
+    background-image: url(../images/common/arrow-icon.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+}
+
+.button:hover {
+    color: $accent-green;
+}
+
+.button:hover span::after {
+    background-image: url(../images/common/arrow-green.svg);
+}
+
+//modifier
+.button--not-found {
+    background-color: $white;
+    color: $accent-green;
+}
+
+.button--not-found::before {
+    border: 1px solid $white;
+    z-index: 0;
+}
+
+.button--not-found::after {
+    background: $accent-green;
+}
+
+.button--not-found span::after {
+    background-image: url(../images/common/arrow-green.svg);
+}
+
+.button--not-found:hover {
+    color: $white;
+}
+
+.button--not-found:hover span::after {
+    background-image: url(../images/common/arrow-icon.svg);
+}
+
+.button--form {
+    padding: rem(16) rem(98) rem(16) rem(56);
+}

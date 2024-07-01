@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.blog-section__inner {
+    max-width: rem(600);
+    width: 100%;
+    @include mq(md){
+        display: flex;
+    }
+}
+
+.blog-section__sidebar {
+    padding: 0 rem(19);
+    margin-left: 0;
+    @include mq(md){
+        padding: 0;
+        margin-left: rem(80);
+    }
+}
+
+
+//modifier
+.blog-section__wrapper--home {
+    padding: rem(6);
+    @include mq(md){
+        padding: 0;
+    }
+}
+
+.blog-section__sidebar--single {
+    padding: 0 rem(25);
+    @include mq(md){
+        padding: 0;
+        margin-left: rem(80);
+    }
+}
+

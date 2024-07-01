@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.sub-layout {
+    position: relative;
+}
+
+.sub-layout::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/common/voice-design1.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: rem(120);
+    width: 100%;
+    height: rem(55);
+    left: calc(49% - min(47vw, 38rem));
+    top: rem(-24);
+    z-index: -1;
+    @include mq(md){
+        max-width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+    }
+}
+
+
+//modifier
+.sub-layout--about::before {
+    @include mq(md){
+        top: rem(-150);
+    }
+}
+
+.sub-layout--information::before {
+    top: rem(-93);
+}

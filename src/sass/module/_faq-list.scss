@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.faq-list__item + .faq-list__item {
+    margin-top: rem(39);
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.faq-list__item-question {
+    padding: rem(16) rem(44) rem(16) rem(16);
+    position: relative;
+    font-size: rem(16);
+    background-color: $accent-green;
+    color: $white;
+    font-weight: $normal;
+    cursor: pointer;
+    @include mq(md){
+        padding: rem(26) rem(72) rem(26) rem(40);
+        font-size: rem(20);
+    }
+}
+
+.faq-list__item-question::before,
+.faq-list__item-question::after {
+    content: "";
+    position: absolute;
+    top: rem(27);
+    right: rem(17);
+    width: rem(28);
+    height: rem(2);
+    background: $white;
+    transition: .3s;
+    @include mq(md){
+        top: rem(37);
+        width: rem(32);
+        right: rem(40);
+    }
+}
+
+.faq-list__item-question::after {
+    transform: rotate(0deg);
+}
+
+.faq-list__item-question.is-open::after {
+    transform: rotate(90deg);
+}
+
+.faq-list__item-answer {
+    padding: rem(24) rem(16) rem(15) rem(16);
+    font-size: rem(16);
+    font-weight: $normal;
+    background-color: $white;
+    border: 1px solid $accent-green;
+    @include mq(md){
+        padding: rem(36) rem(40) rem(36) rem(37);
+        margin-top: rem(16);
+    }
+}

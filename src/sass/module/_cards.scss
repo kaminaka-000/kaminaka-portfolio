@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @include mq(md){
+        gap: rem(40);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.cards__item + .cards__item {
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: 0;
+    }
+}
+
+.cards__content {
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(80);
+        width: rem(708);
+    }
+}
+
+.cards__content-text {
+    font-size: rem(16);
+    text-align: center;
+    @include mq(md){
+        font-size: rem(24);
+    }
+}
+
+
+//modifier
+.cards--blog-section {
+    @include mq(md){
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(81) rem(40);
+    }
+}
+
+//
+.cards-no-posts {
+    display: block; /* 必要に応じてスタイルを設定 */
+}

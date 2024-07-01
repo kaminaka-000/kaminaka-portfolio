@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.tab-second__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: rem(20);
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: rem(24);
+    }
+}
+
+.tab-second__menu + .tab-second__menu {
+    margin-top: rem(16);
+    @include mq(md){
+        margin-top: rem(24);
+    }
+}
+
+.tab-second__item {
+    padding: rem(10) rem(16) ;
+    min-width: rem(102);
+    font-size: rem(14);
+    line-height: 1.5;
+    color: #408F95;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #DDF0F1;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    @include mq(md){
+        font-size: rem(24);
+        padding: rem(13) 0 rem(13) 0;
+        min-width: rem(300);
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(8);
+    }
+}
+
+.tab-second__item::before {
+    display: none;
+    @include mq(md){
+        display: block;
+        content: "";
+        max-width: rem(64);
+        width: 100%;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        height: rem(64);
+        background-color: #408F95;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+}
+
+.tab-second__item:nth-child(1):before {
+    mask-image: url(../images/common/information1.svg); /* マスク画像のパス */
+}
+
+.tab-second__item:nth-child(2):before {
+    mask-image: url(../images/common/information2.svg); /* マスク画像のパス */
+}
+
+.tab-second__item:nth-child(3):before {
+    mask-image: url(../images/common/information3.svg); /* マスク画像のパス */
+}
+
+.tab-second__item:hover::before,
+.tab-second__item.is-active::before {
+    background-color: #fff;
+}
+
+.tab-second__item:hover {
+    color: #fff;
+    background-color: #408F95;
+}
+
+.tab-second__item.is-active {
+    color: #fff;
+    background: #408F95;
+}

@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.breadcrumb__inner {
+    max-width: rem(600);
+    width: 100%;
+}
+
+.breadcrumb span {
+    font-size: rem(14);
+    font-weight: $normal;
+}
+
+//modifier
+.breadcrumb--not-found {
+    color: $white;
+    position: relative;
+    z-index: 1;
+}

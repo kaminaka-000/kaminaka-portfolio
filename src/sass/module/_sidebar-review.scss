@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.sidebar-review__img {
+    aspect-ratio: 294/218;
+}
+
+.sidebar-review__img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-review__age {
+    margin-top: rem(16);
+    font-size: rem(12);
+    font-weight: $normal;
+    line-height: 1.5;
+}
+
+.sidebar-review__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    margin-top: rem(3);
+}
+
+.sidebar-review__button {
+    text-align: center;
+    margin-top: rem(44);
+}

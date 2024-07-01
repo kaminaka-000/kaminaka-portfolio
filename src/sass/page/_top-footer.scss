@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.top-footer {
+    margin-top: rem(100);
+    @include mq(md){
+        margin-top: rem(153);
+    }
+}
+
+//modifier
+.top-footer--contact {
+    margin-top: rem(144);
+}
+
+footer.footer.top-footer--not-found {
+    margin-top: 0;
+    padding-top: rem(88);
+    @include mq(md){
+        padding-top: rem(226);
+    }
+}

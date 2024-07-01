@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.header {
+    height: rem(80);
+    background: rgba(13, 41, 54, 0.68);
+    z-index: 900;
+    position: fixed;
+    width: 100%;
+    transition: 0.3s;
+    top: 0;
+    right: 0;
+    left: 0;
+    @include mq(md){
+      height: rem(90);
+    }
+}
+
+.header__inner {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(15);
+    @include mq(md){
+      padding: 0 rem(21) 0 rem(40);
+    }
+}
+
+.header__logo {
+    max-width: rem(102);
+    width: 100%;
+    position: relative;
+    z-index: 901;
+    transition: all 0.3s ease 0s;
+    @include mq(md){
+      max-width: rem(133);
+    }
+}
+
+.header__logo:hover {
+	opacity: 0.6;
+}
+
+.header__nav-pc {
+    height: inherit;
+    display: none;
+    @include mq(md){
+      display: block;
+    }
+}
+
+.header__nav {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $accent-green;
+  bottom: 0;
+  z-index: 900;
+  top: rem(64);
+}
+
+//modifier
+.header-drawer-open {
+  background-color: #408F95;
+}
+
