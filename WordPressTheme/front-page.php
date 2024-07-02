@@ -5,8 +5,8 @@
       <section class="mv">
         <div class="mv__inner">
           <div class="mv__header">
-            <h2 class="mv__title">DIVING</h2>
-            <p class="mv__subtitle">into the ocean</p>
+            <h2 class="mv__title">Art Museum</h2>
+            <p class="mv__subtitle">meets imagination</p>
           </div>
           <div class="swiper mv__swiper js-mv-swiper">
             <div class="swiper-wrapper mv__wrapper">
@@ -79,8 +79,8 @@
         <section class="campaign top-campaign">
           <div class="campaign__inner">
             <div class="campaign__title heading">
-              <p class="heading__engtitle">Campaign</p>
-              <h2 class="heading__jatitle">キャンペーン</h2>
+              <p class="heading__engtitle">Art</p>
+              <h2 class="heading__jatitle">作品紹介</h2>
             </div>
             <?php if ($custom_query->have_posts()) : ?>
               <div class="swiper campaign__cards js-campaign-cards">
@@ -114,21 +114,18 @@
                           <?php endif; ?>
                         </div>
                         <h3 class="info-card__title"><?php echo esc_html(get_the_title()); ?></h3>
-                        <p class="info-card__lead">全部コミコミ(お一人様)</p>
+                        <p class="info-card__lead">期間限定展示</p>
                         <div class="info-card__layout">
                           <?php
-                          $campaign_info = get_field('campaign_info');
-                          if ($campaign_info) {
-                              $list_price = $campaign_info['campaign-list-price'];
-                              $discount_price = $campaign_info['campaign-discount-price'];
+                          // グループがなくなった場合、直接フィールドにアクセス
+                          $discount_price = get_field('campaign-discount-price');
                           ?>
                           <div class="info-card__before">
-                            <span><?php echo esc_html($list_price ? '￥' . number_format($list_price) : '準備中'); ?></span>
+                            <span>作品名</span>
                           </div>
                           <div class="info-card__after info-card__after--sub">
-                            <span><?php echo esc_html($discount_price ? '￥' . number_format($discount_price) : '準備中'); ?></span>
+                            <span><?php echo esc_html($discount_price ? ($discount_price) : '準備中'); ?></span>
                           </div>
-                          <?php } ?>
                         </div>
                       </div>
                     </div>
@@ -160,23 +157,23 @@
           <div class="about__content">
             <div class="about__title heading">
               <p class="heading__engtitle">About us</p>
-              <h2 class="heading__jatitle">私たちについて</h2>
+              <h2 class="heading__jatitle">当館について</h2>
             </div>
             <div class="about__image-design image-design">
               <div class="image-design__img">
                 <div class="image-design__img-small">
-                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/about1.jpeg')); ?>" alt="<?php echo esc_attr('写真:屋根に乗っているシーサー。'); ?>"/>
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/about-20.jpeg')); ?>" alt="<?php echo esc_attr('写真:美術館の展示室で、様々な絵画が壁に掛けられている。'); ?>"/>
                 </div>
                 <div class="image-design__img-large">
-                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/about2.jpeg')); ?>" alt="<?php echo esc_attr('写真:海の中を泳ぐ二匹の熱帯魚。'); ?>"/>
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/about22.jpeg')); ?>" alt="<?php echo esc_attr('写真:美術館の内部、モダンなデザインの曲線を描く白い通路と照明パネルが設置された天井。'); ?>"/>
                 </div>
               </div>
               <div class="image-design__body">
-                <p class="image-design__title">Dive into <br/>the Ocean</p>
+                <p class="image-design__title">Discover <br/>Art Today</p>
                 <div class="image-design__box">
                   <p class="image-design__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br/>
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                  ここでしか味わえない斬新なアート作品に触れ、新たなインスピレーションを得てください。創造力を刺激する多彩な展示が、あなたを待ち受けています。<br/>
+                  多様な視点からアートを楽しむことで、あなたの感性が豊かに広がります。現代アートの新しい波を、ぜひともご体験ください。
                   </p>
                   <div class="image-design__button">
                     <a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="button"><span>View more</span></a>
@@ -193,17 +190,17 @@
         <div class="information__inner inner">
           <div class="information__title heading">
             <p class="heading__engtitle">Information</p>
-            <h2 class="heading__jatitle">ダイビング情報</h2>
+            <h2 class="heading__jatitle">展示情報</h2>
           </div>
           <div class="information__course course">
             <div class="course__img">
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/information.jpeg')); ?>" alt="<?php echo esc_attr('写真:サンゴ礁に泳ぐ熱帯魚の群れ。'); ?>"/>
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/information-img.jpeg')); ?>" alt="<?php echo esc_attr('写真:サンゴ礁に泳ぐ熱帯魚の群れ。'); ?>"/>
             </div>
             <div class="course__wrapper">
-              <h3 class="course__title">ライセンス講習</h3>
+              <h3 class="course__title">常設展示「アートの旅」</h3>
               <p class="course__text">
-                当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br/>
-                正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+                  当館の常設展示「アートの旅」では、古代から現代までの多彩なアート作品を展示しています。<br/>
+                  この展示では、絵画、彫刻、工芸品など、さまざまな時代やスタイルの芸術作品を鑑賞することができます。
               </p>
               <div class="course__button">
                 <a href="<?php echo esc_url(home_url('/information/')); ?>" class="button"><span>View more</span></a>
@@ -432,7 +429,7 @@
                     ?>
                 </div>
                 <div class="price__img-pc">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/price-pc.webp')); ?>" alt="<?php echo esc_attr('写真:海の中でたくさんの魚がサンゴのそばを泳いでいる。'); ?>"/>
+                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/price-img1.jpeg')); ?>" alt="<?php echo esc_attr('写真:海の中でたくさんの魚がサンゴのそばを泳いでいる。'); ?>"/>
                 </div>
             </div>
             <div class="price__button">

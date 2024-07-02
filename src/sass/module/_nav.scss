@@ -62,6 +62,8 @@
   color: $white;
   font-weight: 400;
   transition: all 0.3s ease 0s;
+
+  white-space: nowrap;
 }
 
 .nav__item a:hover {

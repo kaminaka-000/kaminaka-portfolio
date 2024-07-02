@@ -22,7 +22,7 @@
 }
 
 .sub-price__title-group {
-    background-color: $accent-green;
+    background-color: $accent-color;
     padding: rem(8) 0;
     @include mq(md){
         padding: rem(40) 0;
@@ -93,7 +93,7 @@
     padding: 0 rem(16);
     font-size: rem(16);
     font-weight: $normal;
-    border: 1px solid $accent-green;
+    border: 1px solid $accent-color;
     line-height: 1.5;
     @include mq(md){
         padding: rem(17) rem(16);

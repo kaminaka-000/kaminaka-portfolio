@@ -10,7 +10,7 @@
     @include mq(md){
         position: absolute;
         content: "";
-        background-image: url(../images/common/voice-design1.svg);
+        background-image: url(../images/common/lotus3.svg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -27,12 +27,12 @@
     @include mq(md){
         position: absolute;
         content: "";
-        background-image: url(../images/common/voice-design.svg);
+        background-image: url(../images/common/lotus4.svg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         display: block;
-        max-width: rem(71);
+        max-width: rem(172);
         width: 100%;
         height: rem(162);
         bottom: rem(-69);

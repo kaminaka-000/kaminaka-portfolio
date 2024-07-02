@@ -26,7 +26,7 @@
       <div class="header__inner">
         <div class="header__logo">
           <a href="<?php echo esc_url(home_url()); ?>">
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/logo.svg')); ?>" alt="ロゴ:codeups" />
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/art-logo77.png')); ?>" alt="ロゴ:かみなか美術館" />
           </a>
         </div>
         <button class="header__hamburger header-hamburger js-header-hamburger">
@@ -37,13 +37,13 @@
         <nav class="header__nav-pc nav-pc">
           <ul class="nav-pc__items">
             <li class="nav-pc__item">
-              <a href="<?php echo $campaign; ?>">Campaign<span>キャンペーン</span></a>
+              <a href="<?php echo $campaign; ?>">Art<span>作品紹介</span></a>
             </li>
             <li class="nav-pc__item">
-              <a href="<?php echo $about_us; ?>">About us<span>私たちについて</span></a>
+              <a href="<?php echo $about_us; ?>">About us<span>当館について</span></a>
             </li>
             <li class="nav-pc__item">
-              <a href="<?php echo $information; ?>">Information<span>ダイビング情報</span></a>
+              <a href="<?php echo $information; ?>">Information<span>展示情報</span></a>
             </li>
             <li class="nav-pc__item">
               <a href="<?php echo $blog; ?>">Blog<span>ブログ</span></a>
@@ -72,7 +72,7 @@
                     <li class="nav__item">
                       <a href="<?php echo $campaign; ?>">
                         <div class="nav__item-wrapper">
-                          <span>キャンペーン</span>
+                          <span>作品紹介</span>
                         </div>
                       </a>
                     </li>
@@ -95,7 +95,7 @@
                     <li class="nav__item">
                       <a href="<?php echo $about_us; ?>">
                         <div class="nav__item-wrapper">
-                          <span>私たちについて</span>
+                          <span>当館について</span>
                         </div>
                       </a>
                     </li>
@@ -108,18 +108,18 @@
                     <li class="nav__item">
                       <a href="<?php echo $information; ?>">
                         <div class="nav__item-wrapper">
-                          <span>ダイビング情報</span>
+                          <span>展示情報</span>
                         </div>
                       </a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($information . '?tab=tab01'); ?>">ライセンス講習</a>
+                      <a href="<?php echo esc_url($information . '?tab=tab01'); ?>">常設展示</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($information . '?tab=tab03'); ?>">体験ダイビング</a>
+                      <a href="<?php echo esc_url($information . '?tab=tab03'); ?>">特別展示</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($information . '?tab=tab02'); ?>">ファンダイビング</a>
+                      <a href="<?php echo esc_url($information . '?tab=tab02'); ?>">イベント</a>
                     </li>
                   </ul>
                 </div>
@@ -157,13 +157,13 @@
                       </a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($price . '#sub-price-license'); ?>">ライセンス講習</a>
+                      <a href="<?php echo esc_url($price . '#sub-price-license'); ?>">入館料</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($price . '#sub-price-experience'); ?>">体験ダイビング</a>
+                      <a href="<?php echo esc_url($price . '#sub-price-experience'); ?>">特別展<br class="u-mobile">（入館料を含む）</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($price . '#sub-price-fan'); ?>">ファンダイビング</a>
+                      <a href="<?php echo esc_url($price . '#sub-price-fan'); ?>">年間パスポート</a>
                     </li>
                   </ul>
                 </div>

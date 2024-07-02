@@ -8,10 +8,10 @@
 
 .pagenavi .current,
 .pagenavi .page {
-  color: $accent-green;
+  color: $accent-color;
   font-size: rem(16);
   font-weight: $bold;
-  border: 1px solid $accent-green;
+  border: 1px solid $accent-color;
   transition: 0.3s;
   height: rem(38);
   min-width: rem(38);
@@ -23,7 +23,7 @@
 .pagenavi .nextpostslink {
   font-size: rem(16);
   font-weight: $bold;
-  border: 1px solid $accent-green;
+  border: 1px solid $accent-color;
   transition: 0.3s;
 }
 
@@ -35,7 +35,7 @@
   height: rem(38);
   min-width: rem(38);
   font-size: rem(16);
-  color: $accent-green;
+  color: $accent-color;
   font-weight: $normal;
 }
 
@@ -53,21 +53,21 @@
   height: rem(38);
   min-width: rem(38);
   font-size: rem(16);
-  color: $accent-green;
+  color: $accent-color;
   font-weight: $normal;
 }
 
 .pagenavi .wp-pagenavi a:hover {
   color: #fff;
-  background-color: $accent-green;
-  border-color: $accent-green;
+  background-color: $accent-color;
+  border-color: $accent-color;
   opacity: 1;
 }
 
 .pagenavi .wp-pagenavi .current {
   color: #fff;
-  background-color: $accent-green;
-  border-color: $accent-green;
+  background-color: $accent-color;
+  border-color: $accent-color;
 }
 
 

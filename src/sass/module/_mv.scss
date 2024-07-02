@@ -15,10 +15,13 @@
     z-index: 2;
     text-align: center;
     color: $white;
+    text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666,
+    1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666,
+    0 -1px 0 #666666;
 }
 
 .mv__title {
-    font-family: $second-font-family;
+    font-family: $accent-font-family;
     font-size: rem(40);
     letter-spacing: 0.54em;
     font-weight: $normal;

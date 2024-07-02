@@ -33,7 +33,7 @@
     z-index: 901;
     transition: all 0.3s ease 0s;
     @include mq(md){
-      max-width: rem(133);
+      max-width: rem(105);
     }
 }
 
@@ -56,7 +56,7 @@
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color: $accent-green;
+  background-color: $accent-color;
   bottom: 0;
   z-index: 900;
   top: rem(64);
@@ -64,6 +64,6 @@
 
 //modifier
 .header-drawer-open {
-  background-color: #408F95;
+  background-color: #1E465A;
 }
 

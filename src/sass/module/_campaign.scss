@@ -48,7 +48,13 @@
     @include mq(md){
         width: rem(80);
         height: rem(93);
+        transition: opacity 0.3s ease;
     }
+}
+
+.campaign__prev:hover,
+.campaign__next:hover {
+    opacity: 0.4;
 }
 
 .campaign__prev {

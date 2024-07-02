@@ -5,8 +5,8 @@
       <section class="mv">
         <div class="mv__inner">
           <div class="mv__header">
-            <h2 class="mv__title">DIVING</h2>
-            <p class="mv__subtitle">into the ocean</p>
+            <h2 class="mv__title">Art Museum</h2>
+            <p class="mv__subtitle">meets imagination</p>
           </div>
           <div class="swiper mv__swiper js-mv-swiper">
             <div class="swiper-wrapper mv__wrapper">
@@ -52,8 +52,8 @@
         <section class="campaign top-campaign">
           <div class="campaign__inner">
             <div class="campaign__title heading">
-              <p class="heading__engtitle">Campaign</p>
-              <h2 class="heading__jatitle">キャンペーン</h2>
+              <p class="heading__engtitle">Art</p>
+              <h2 class="heading__jatitle">作品紹介</h2>
             </div>
             <div class="swiper campaign__cards js-campaign-cards">
               <ul class="swiper-wrapper campaign__cards-wrapper">

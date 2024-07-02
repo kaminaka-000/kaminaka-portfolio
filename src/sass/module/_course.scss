@@ -22,7 +22,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #408F95;
+    background-color: #c0c0c0;
 }
 
 .course__img::before {
@@ -63,7 +63,7 @@
 }
 
 .course__text {
-    border-top: 1px solid $accent-green;
+    border-top: 1px solid $accent-color;
     padding-top: rem(8);
     line-height: 1.5;
     margin-top: rem(3);

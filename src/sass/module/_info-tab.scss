@@ -3,7 +3,7 @@
 .info-tab__item {
     padding: rem(22) rem(22) rem(22) rem(24);
     display: none;
-    border: 1px solid $accent-green;
+    border: 1px solid $accent-color;
     @include mq(md){
         padding: rem(24);
     }
@@ -41,7 +41,7 @@
     font-size: rem(24);
     font-weight: $bold;
     line-height: 1;
-    border-bottom: 1px solid $accent-green;
+    border-bottom: 1px solid $accent-color;
     padding-bottom: rem(8);
 }
 

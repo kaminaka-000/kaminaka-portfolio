@@ -11,6 +11,9 @@ function my_theme_enqueue_scripts() {
   // Google Fonts
   wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap', array(), null);
 
+  // New Google Font: Lora
+  wp_enqueue_style('google-fonts-lora', 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap', array(), null);
+
   // Swiper CSS
   wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
 

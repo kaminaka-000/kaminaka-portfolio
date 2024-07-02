@@ -8,7 +8,7 @@
   display: block;
   position: absolute;
   content: "";
-  background-image: url(../images/common/contact-fish.png);
+  background-image: url(../images/common/lotus6.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@
   width: 100%;
   margin-inline: auto;
   @include mq(md){
-    max-width: rem(200);
+    max-width: rem(135);
   }
 }
 
@@ -68,7 +68,7 @@
 }
 
 .contact__address {
-    border-top: 1px solid $accent-green;
+    border-top: 1px solid $accent-color;
     margin-top: rem(7);
     @include mq(md) {
         display: flex;
@@ -124,7 +124,7 @@
     @include mq(md){
         width: 1px;
         height: rem(255);
-        background-color: $accent-green;
+        background-color: $accent-color;
         margin-top: rem(80);
     }
 }
@@ -146,7 +146,7 @@
 .contact__text {
   font-size: rem(14);
   font-weight: $normal;
-  color: $accent-green;
+  color: $accent-color;
   margin-top: rem(8);
   line-height: 1.28571;
 }

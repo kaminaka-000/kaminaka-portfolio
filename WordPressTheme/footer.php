@@ -19,17 +19,17 @@
           <div class="contact__layout">
             <div class="contact__wrapper">
               <div class="contact__logo">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/contact-logo.svg" alt="ロゴ:codeups"/>
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/art-logo78.png" alt="ロゴ:かみなか美術館"/>
               </div>
               <div class="contact__address">
                 <address class="contact__body">
-                  <p>沖縄県那覇市1-1</p>
+                  <p>東京都台東区上野1-22</p>
                   <p><a href="tel:0120-000-0000">TEL:0120-000-0000</a></p>
-                  <p>営業時間:8:30-19:00</p>
-                  <p>定休日:毎週火曜日</p>
+                  <p>営業時間:9:00-18:00</p>
+                  <p>定休日:月曜日</p>
                 </address>
                 <div class="contact__map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.695979559861!2d127.6459317871511!3d26.206566330983573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569cff4b45511%3A0x8415f815ec4d6acb!2z6YKj6KaH56m65rivIOWbveWGhee3muaXheWuouOCv-ODvOODn-ODiuODq-ODk-ODqw!5e0!3m2!1sja!2sjp!4v1707531838749!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5652.213600445425!2d139.76668887755363!3d35.714565053347165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e9e8b28ebb3%3A0x9bba88ca3db2f4be!2z44CSMTEwLTAwMDUg5p2x5Lqs6YO95Y-w5p2x5Yy65LiK6YeO!5e0!3m2!1sja!2sjp!4v1718278053681!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@
         <div class="footer__group">
           <div class="footer__logo">
             <a href="<?php echo home_url(); ?>">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo.svg" alt="ロゴ:codeups"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/art-logo77.png" alt="ロゴ:かみなか美術館"/>
             </a>
           </div>
           <div class="footer__icons">
@@ -86,7 +86,7 @@
                     <li class="nav__item">
                       <a href="<?php echo $campaign; ?>">
                         <div class="nav__item-wrapper">
-                          <span>キャンペーン</span>
+                          <span>作品紹介</span>
                         </div>
                       </a>
                     </li>
@@ -109,7 +109,7 @@
                     <li class="nav__item">
                       <a href="<?php echo $about_us; ?>">
                         <div class="nav__item-wrapper">
-                          <span>私たちについて</span>
+                          <span>当館について</span>
                         </div>
                       </a>
                     </li>
@@ -122,18 +122,18 @@
                     <li class="nav__item">
                       <a href="<?php echo $information; ?>">
                         <div class="nav__item-wrapper">
-                          <span>ダイビング情報</span>
+                          <span>展示情報</span>
                         </div>
                       </a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo $information; ?>?tab=tab01">ライセンス講習</a>
+                      <a href="<?php echo $information; ?>?tab=tab01">常設展示</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo $information; ?>?tab=tab03">体験ダイビング</a>
+                      <a href="<?php echo $information; ?>?tab=tab03">特別展示</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo $information; ?>?tab=tab02">ファンダイビング</a>
+                      <a href="<?php echo $information; ?>?tab=tab02">イベント</a>
                     </li>
                   </ul>
                 </div>
@@ -171,13 +171,13 @@
                       </a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo $price; ?>#sub-price-license">ライセンス講習</a>
+                      <a href="<?php echo $price; ?>#sub-price-license">入館料</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo $price; ?>#sub-price-experience">体験ダイビング</a>
+                      <a href="<?php echo $price; ?>#sub-price-experience">特別展<br class="u-mobile">（入館料を含む）</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo $price; ?>#sub-price-fan">ファンダイビング</a>
+                      <a href="<?php echo $price; ?>#sub-price-fan">年間パスポート</a>
                     </li>
                   </ul>
                 </div>

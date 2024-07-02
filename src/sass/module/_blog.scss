@@ -10,7 +10,7 @@
     @include mq(md){
         position: absolute;
         content: "";
-        background-image: url(../images/common/blog-bg-pc.jpeg);
+        background-image: url(../images/common/blog-bg2.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
         aspect-ratio: 1440/500;
@@ -25,14 +25,14 @@
     @include mq(md){
         position: absolute;
         content: "";
-        background-image: url(../images/common/fish-design.png);
+        background-image: url(../images/common/lotus2.svg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         max-width: rem(437);
         width: 100%;
-        height: rem(201);
-        top: rem(25);
+        height: rem(137);
+        top: rem(60);
         left: calc(49% - min(47vw, 38rem));
     }
 }

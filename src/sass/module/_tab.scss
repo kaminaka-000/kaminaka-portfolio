@@ -24,8 +24,8 @@
   width: 100%;
   font-size: rem(14);
   line-height: 1.57143;
-  color: $accent-green;
-  border: 1px solid $accent-green;
+  color: $accent-color;
+  border: 1px solid $accent-color;
   background-color: #fff;
   text-align: center;
   cursor: pointer;
@@ -37,11 +37,11 @@
 
 .tab__menu.is-active {
   color: #fff;
-  background-color: $accent-green;
+  background-color: $accent-color;
 }
 
 .tab__menu:hover {
   color: #fff;
-  background-color: $accent-green;
+  background-color: $accent-color;
 }
 

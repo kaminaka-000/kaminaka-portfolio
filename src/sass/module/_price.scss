@@ -15,13 +15,13 @@
         display: block;
         position: absolute;
         content: "";
-        background-image: url(../images/common/price-fish-design.svg);
+        background-image: url(../images/common/lotus5.svg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         max-width: rem(437);
         width: 100%;
-        height: rem(201);
+        height: rem(150);
         bottom: rem(62);
         left: calc(50% - min(49vw, 38.7rem));
     }
@@ -63,7 +63,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #408F95;
+    background-color: #c0c0c0;
 }
 
 .price__img-sp img {
@@ -86,7 +86,7 @@
 .price__sub-title {
     font-weight: $bold;
     line-height: 1.5;
-    border-bottom: 1px solid $accent-green;
+    border-bottom: 1px solid $accent-color;
     padding-bottom: rem(3);
     font-size: rem(16);
     @include mq(md){
@@ -143,7 +143,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #408F95;
+    background-color: #c0c0c0;
 }
 
 .price__img-pc::before {

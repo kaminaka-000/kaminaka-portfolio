@@ -37,8 +37,8 @@
 }
 
 .info-card__category {
-  color: $accent-green;
-  border: 1px solid $accent-green;
+  color: $accent-color;
+  border: 1px solid $accent-color;
   font-size: rem(12);
   line-height: 1.83333;
   padding: rem(4) rem(12);
@@ -62,7 +62,7 @@
 .info-card__lead {
   text-align: center;
   font-size: rem(14);
-  border-top: 1px solid $accent-green;
+  border-top: 1px solid $accent-color;
   padding-top: rem(8);
   margin-top: rem(6);
   line-height: 1.71429;
@@ -76,7 +76,7 @@
 
 .info-card__layout {
   display: flex;
-  align-items: center;
+  //align-items: center;
   margin-top: rem(8);
   gap: rem(16);
   justify-content: center;
@@ -98,28 +98,32 @@
   }
 }
 
-.info-card__before span {
-  position: relative;
-}
+// .info-card__before span {
+//   position: relative;
+// }
 
-.info-card__before span::after {
-  content: "";
-  width: 103%;
-  border-top: 3px solid #c94800;
-  position: absolute;
-  top: 50%;
-  left: 0;
-}
+// .info-card__before span::after {
+//   content: "";
+//   width: 103%;
+//   border-top: 3px solid #c94800;
+//   position: absolute;
+//   top: 50%;
+//   left: 0;
+// }
 
 .info-card__after {
   font-family: $second-font-family;
   font-size: rem(32);
   font-weight: $bold;
   line-height: 1;
-  color: $accent-green;
+  color: $accent-color;
+  display: flex;
+  align-items: flex-end;
   @include mq(md) {
-    font-size: rem(40);
+    font-size: rem(24);
     margin-left: rem(26);
+    max-width: rem(168);
+    width: 100%;
   }
 }
 
@@ -173,7 +177,7 @@
 .info-card__date {
   text-align: center;
   margin-top: rem(32);
-  color: $accent-green;
+  color: $accent-color;
   font-size: rem(16);
   font-weight: $bold;
   line-height: 1.125;
@@ -183,7 +187,7 @@
   text-align: center;
   margin-top: rem(7);
   font-size: rem(14);
-  color: $accent-green;
+  color: $accent-color;
   font-weight: $normal;
   line-height: 1.28571;
 }

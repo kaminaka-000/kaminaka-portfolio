@@ -12,7 +12,7 @@
     width: 100%;
     font-size: rem(12);
     border-radius: 0;
-    border: 1px solid $accent-green;
+    border: 1px solid $accent-color;
     background-image: url(../images/common/sub-contact-arrow.svg);
     background-repeat: no-repeat;
     background-size: rem(12);
@@ -26,7 +26,7 @@
 }
 
 .form-select select:focus {
-    border: 1px solid $accent-green;
+    border: 1px solid $accent-color;
     box-shadow: none;
 	outline: none;
 }

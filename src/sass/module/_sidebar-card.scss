@@ -39,7 +39,7 @@
 .sidebar-card__lead {
     text-align: center;
     font-size: rem(14);
-    border-top: 1px solid $accent-green;
+    border-top: 1px solid $accent-color;
     padding-top: rem(8);
     margin-top: rem(6);
     line-height: 1.71429;
@@ -83,7 +83,7 @@
     font-size: rem(32);
     font-weight: $bold;
     line-height: 1;
-    color: $accent-green;
+    color: $accent-color;
 }
 
 .sidebar-card__button {
