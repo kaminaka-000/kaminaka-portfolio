@@ -75,6 +75,11 @@
                 <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/instagramlogo.svg" alt="アイコン:instagram"/>
               </a>
             </div>
+            <div class="footer__icon footer__icon--x">
+              <a href="https://x.com/home?lang=ja" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logox.svg" alt="アイコン:X"/>
+              </a>
+            </div>
           </div>
         </div>
         <nav class="footer__nav nav">

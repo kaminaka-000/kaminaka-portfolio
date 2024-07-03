@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.wpcf7-form.init {
+  overflow: hidden;
+}
+
 .wpcf7 form .wpcf7-response-output {
   border: none;
 }

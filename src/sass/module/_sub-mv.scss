@@ -4,11 +4,29 @@
     position: relative;
 }
 
+.sub-mv__img {
+  position: relative;
+}
+
+.sub-mv__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background: rgba(255, 255, 255, 0.6); /* ここで半透明の白を設定 */
+  z-index: 1; /* オーバーレイを最前面に表示 */
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .sub-mv__img img {
   aspect-ratio: 375 / 460;
   width: 100%;
   height: rem(460);
   object-fit: cover;
+  position: relative;
+  z-index: 0;
   @include mq(md) {
     aspect-ratio: 1440 / 548;
     height: rem(548);
@@ -23,8 +41,9 @@
   width: 100%;
   color: $white;
   text-align: center;
-  font-family: $second-font-family;
+  font-family: $accent-font-family;
   line-height: 1;
+  z-index: 2; /* コンテンツをオーバーレイの上に表示 */
   @include mq(md){
     transform: translate(-50%, 8%);
   }
@@ -33,6 +52,9 @@
 .sub-mv__title {
   font-size: rem(40);
   font-weight: $normal;
+  text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666,
+  1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666,
+  0 -1px 0 #666666;
   @include mq(md) {
     font-size: rem(80);
   }

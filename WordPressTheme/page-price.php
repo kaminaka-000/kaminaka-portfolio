@@ -2,26 +2,26 @@
 
 
 <main>
-      <!-- 下層ページのmv -->
-      <section class="sub-mv">
-        <div class="sub-mv__inner">
-          <div class="sub-mv__header">
-            <h1 class="sub-mv__title">Price</h1>
-          </div>
-          <div class="sub-mv__img">
-            <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-price-mv-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-price-mv.jpeg" alt="写真:海面からわずかに突き出たスノーケリングをしている人。" />
-            </picture>
-          </div>
+    <!-- 下層ページのmv -->
+    <section class="sub-mv">
+    <div class="sub-mv__inner">
+        <div class="sub-mv__header">
+        <h1 class="sub-mv__title">Price</h1>
         </div>
-      </section>
+        <div class="sub-mv__img">
+        <picture>
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract6.jpeg"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract66.jpeg" alt="写真:淡い色調の中に繊細な形が浮かび上がる抽象画。" />
+        </picture>
+        </div>
+    </div>
+    </section>
 
-      <!-- パンくず -->
-      <?php get_template_part('parts/breadcrumb'); ?>
+    <!-- パンくず -->
+    <?php get_template_part('parts/breadcrumb'); ?>
 
-      <!-- sub-price -->
-      <section class="sub-price sub-price-spacing sub-layout">
+    <!-- sub-price -->
+    <section class="sub-price sub-price-spacing sub-layout">
         <div class="sub-price__inner inner">
             <?php
             // SCFでデータを取得する部分

@@ -25,9 +25,9 @@
     min-width: rem(102);
     font-size: rem(14);
     line-height: 1.5;
-    color: #408F95;
+    color: #1E465A;
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-    background-color: #DDF0F1;
+    background-color: #f5f5f5;
     text-align: center;
     cursor: pointer;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -54,21 +54,21 @@
         mask-repeat: no-repeat;
         mask-position: center;
         height: rem(64);
-        background-color: #408F95;
+        background-color: #1E465A;
         transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     }
 }
 
 .tab-second__item:nth-child(1):before {
-    mask-image: url(../images/common/information1.svg); /* マスク画像のパス */
+    mask-image: url(../images/common/information4.svg); /* マスク画像のパス */
 }
 
 .tab-second__item:nth-child(2):before {
-    mask-image: url(../images/common/information2.svg); /* マスク画像のパス */
+    mask-image: url(../images/common/information5.svg); /* マスク画像のパス */
 }
 
 .tab-second__item:nth-child(3):before {
-    mask-image: url(../images/common/information3.svg); /* マスク画像のパス */
+    mask-image: url(../images/common/information6.svg); /* マスク画像のパス */
 }
 
 .tab-second__item:hover::before,
@@ -78,10 +78,10 @@
 
 .tab-second__item:hover {
     color: #fff;
-    background-color: #408F95;
+    background-color: #1E465A;
 }
 
 .tab-second__item.is-active {
     color: #fff;
-    background: #408F95;
+    background: #1E465A;
 }

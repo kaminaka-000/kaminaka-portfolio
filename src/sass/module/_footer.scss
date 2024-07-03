@@ -40,10 +40,11 @@
 
 .footer__icons {
   display: flex;
-  gap: rem(16);
+  gap: rem(26);
   margin-top: rem(16);
   @include mq(md) {
     margin-top: rem(80);
+    gap: rem(16);
   }
 }
 
@@ -88,5 +89,16 @@
   margin-top: rem(144);
   @include mq(md){
     margin-top: rem(120);
+  }
+}
+
+.footer__icons .footer__icon--x img {
+  width: rem(18);
+  margin-top: rem(3);
+  margin-left: rem(3);
+  @include mq(md){
+    width: rem(23);
+    margin-top: rem(4);
+    margin-left: rem(4);
   }
 }

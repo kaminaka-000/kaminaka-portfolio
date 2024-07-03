@@ -10,8 +10,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/faq-mv-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/faq-mv.jpeg" alt="写真:青い空と雲、透き通る青い海水、白い砂浜が広がる熱帯のビーチ." />
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract7.jpeg"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract77.jpeg" alt="写真:鮮やかな青、黄色、灰色のブロックが重なり合い、ダイナミックでエネルギッシュ。" />
             </picture>
           </div>
         </div>

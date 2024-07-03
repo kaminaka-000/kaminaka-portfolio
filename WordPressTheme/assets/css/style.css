@@ -974,7 +974,7 @@ footer.footer.top-footer--not-found {
 
 .footer__icons {
 	display: flex;
-	gap: 1rem;
+	gap: 1.625rem;
 	margin-top: 1rem;
 }
 
@@ -1006,6 +1006,12 @@ footer.footer.top-footer--not-found {
 
 .footer--contact-thankyou {
 	margin-top: 9rem;
+}
+
+.footer__icons .footer__icon--x img {
+	margin-left: 0.1875rem;
+	margin-top: 0.1875rem;
+	width: 1.125rem;
 }
 
 .form-checkbox label {
@@ -1083,11 +1089,11 @@ footer.footer.top-footer--not-found {
 }
 
 .form-input input::-moz-placeholder {
-	color: #f5f5f5;
+	color: #999999;
 }
 
 .form-input input::placeholder {
-	color: #f5f5f5;
+	color: #999999;
 }
 
 .form-input input.error::-moz-placeholder {
@@ -1805,7 +1811,7 @@ footer.footer.top-footer--not-found {
 }
 
 .nav__item-wrapper::before {
-	background-image: url(../images/common/starfish-icon.svg);
+	background-image: url(../images/common/flower.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -2344,7 +2350,7 @@ footer.footer.top-footer--not-found {
 }
 
 .sitemap::before {
-	background-image: url(../images/common/voice-design1.svg);
+	background-image: url(../images/common/lotus5.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -2382,12 +2388,13 @@ footer.footer.top-footer--not-found {
 }
 
 .sub-about__body {
+	font-family: "Lora", sans-serif;
 	margin-top: 2.5rem;
+	text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666, 1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666, 0 -1px 0 #666666;
 }
 
 .sub-about__title {
 	color: #fff;
-	font-family: "Lora", sans-serif;
 	font-size: 2.5rem;
 	line-height: 1;
 	margin-left: 1.5rem;
@@ -2469,7 +2476,7 @@ footer.footer.top-footer--not-found {
 }
 
 .sub-layout::before {
-	background-image: url(../images/common/voice-design1.svg);
+	background-image: url(../images/common/lotus5.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -2491,17 +2498,34 @@ footer.footer.top-footer--not-found {
 	position: relative;
 }
 
+.sub-mv__img {
+	position: relative;
+}
+
+.sub-mv__img::before {
+	background: rgba(0, 0, 0, 0.4);
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1; /* オーバーレイを最前面に表示 */
+}
+
 .sub-mv__img img {
 	-o-object-fit: cover;
 	aspect-ratio: 375/460;
 	height: 28.75rem;
 	object-fit: cover;
+	position: relative;
 	width: 100%;
+	z-index: 0;
 }
 
 .sub-mv__header {
 	color: #fff;
-	font-family: "Lato", sans-serif;
+	font-family: "Lora", sans-serif;
 	left: 50%;
 	line-height: 1;
 	position: absolute;
@@ -2509,11 +2533,13 @@ footer.footer.top-footer--not-found {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
+	z-index: 2; /* コンテンツをオーバーレイの上に表示 */
 }
 
 .sub-mv__title {
 	font-size: 2.5rem;
 	font-weight: 400;
+	text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666, 1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666, 0 -1px 0 #666666;
 }
 
 .sub-price__inner {
@@ -2553,7 +2579,7 @@ footer.footer.top-footer--not-found {
 }
 
 .sub-price__title::before {
-	background-image: url(../images/common/sub-information-icon1-white.svg);
+	background-image: url(../images/common/palette.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -2614,9 +2640,9 @@ footer.footer.top-footer--not-found {
 }
 
 .tab-second__item {
-	background-color: #DDF0F1;
+	background-color: #f5f5f5;
 	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-	color: #408F95;
+	color: #1E465A;
 	cursor: pointer;
 	font-size: 0.875rem;
 	line-height: 1.5;
@@ -2631,18 +2657,18 @@ footer.footer.top-footer--not-found {
 }
 
 .tab-second__item:nth-child(1):before {
-	-webkit-mask-image: url(../images/common/information1.svg);
-	mask-image: url(../images/common/information1.svg); /* マスク画像のパス */
+	-webkit-mask-image: url(../images/common/information4.svg);
+	mask-image: url(../images/common/information4.svg); /* マスク画像のパス */
 }
 
 .tab-second__item:nth-child(2):before {
-	-webkit-mask-image: url(../images/common/information2.svg);
-	mask-image: url(../images/common/information2.svg); /* マスク画像のパス */
+	-webkit-mask-image: url(../images/common/information5.svg);
+	mask-image: url(../images/common/information5.svg); /* マスク画像のパス */
 }
 
 .tab-second__item:nth-child(3):before {
-	-webkit-mask-image: url(../images/common/information3.svg);
-	mask-image: url(../images/common/information3.svg); /* マスク画像のパス */
+	-webkit-mask-image: url(../images/common/information6.svg);
+	mask-image: url(../images/common/information6.svg); /* マスク画像のパス */
 }
 
 .tab-second__item:hover::before,
@@ -2651,12 +2677,12 @@ footer.footer.top-footer--not-found {
 }
 
 .tab-second__item:hover {
-	background-color: #408F95;
+	background-color: #1E465A;
 	color: #fff;
 }
 
 .tab-second__item.is-active {
-	background: #408F95;
+	background: #1E465A;
 	color: #fff;
 }
 
@@ -2861,6 +2887,10 @@ footer.footer.top-footer--not-found {
 
 .voice__no-posts {
 	margin-top: 1.5rem;
+}
+
+.wpcf7-form.init {
+	overflow: hidden;
 }
 
 .wpcf7 form .wpcf7-response-output {
@@ -3276,7 +3306,7 @@ footer.footer.top-footer--not-found {
 }
 
 .contact__logo {
-	max-width: 8.4375rem;
+	max-width: 10.5625rem;
 }
 
 .contact__layout {
@@ -3321,13 +3351,13 @@ footer.footer.top-footer--not-found {
 
 .contact__line {
 	background-color: #1E465A;
-	height: 15.9375rem;
+	height: 18.9375rem;
 	margin-top: 5rem;
 	width: 1px;
 }
 
 .contact__box {
-	padding: 6.25rem 7rem 6.1875rem 5.0625rem;
+	padding: 8.25rem 7rem 6.1875rem 5.0625rem;
 }
 
 .contact__title {
@@ -3404,6 +3434,7 @@ footer.footer.top-footer--not-found {
 }
 
 .footer__icons {
+	gap: 1rem;
 	margin-top: 5rem;
 }
 
@@ -3422,6 +3453,12 @@ footer.footer.top-footer--not-found {
 
 .footer--contact-thankyou {
 	margin-top: 7.5rem;
+}
+
+.footer__icons .footer__icon--x img {
+	margin-left: 0.25rem;
+	margin-top: 0.25rem;
+	width: 1.4375rem;
 }
 
 .form-checkbox label:not(:first-of-type) {
@@ -3971,11 +4008,11 @@ footer.footer.top-footer--not-found {
 .sub-layout::before {
 	height: 8.625rem;
 	max-width: 18.8125rem;
-	top: -4.375rem;
+	top: -6.25rem;
 }
 
 .sub-layout--about::before {
-	top: -9.375rem;
+	top: -11.875rem;
 }
 
 .sub-mv__img img {
@@ -4017,7 +4054,7 @@ footer.footer.top-footer--not-found {
 }
 
 .sub-price__title::after {
-	background-image: url(../images/common/sub-information-icon1-white.svg);
+	background-image: url(../images/common/palette.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -4072,7 +4109,7 @@ footer.footer.top-footer--not-found {
 	-webkit-mask-size: contain;
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-position: center;
-	background-color: #408F95;
+	background-color: #1E465A;
 	content: "";
 	display: block;
 	height: 4rem;

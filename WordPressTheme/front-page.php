@@ -117,7 +117,6 @@
                         <p class="info-card__lead">期間限定展示</p>
                         <div class="info-card__layout">
                           <?php
-                          // グループがなくなった場合、直接フィールドにアクセス
                           $discount_price = get_field('campaign-discount-price');
                           ?>
                           <div class="info-card__before">
@@ -147,8 +146,6 @@
             <?php endif; wp_reset_postdata(); ?>
           </div>
         </section>
-
-
 
 
       <!-- about -->
@@ -194,7 +191,7 @@
           </div>
           <div class="information__course course">
             <div class="course__img">
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/information-img.jpeg')); ?>" alt="<?php echo esc_attr('写真:サンゴ礁に泳ぐ熱帯魚の群れ。'); ?>"/>
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/information-img.jpeg')); ?>" alt="<?php echo esc_attr('写真:薄暗いギャラリーに展示された数枚の絵画と資料。'); ?>"/>
             </div>
             <div class="course__wrapper">
               <h3 class="course__title">常設展示「アートの旅」</h3>
@@ -362,7 +359,7 @@
             </div>
             <div class="price__content">
                 <div class="price__img-sp">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/price.webp')); ?>" alt="<?php echo esc_attr('写真:海の中でたくさんの魚がサンゴのそばを泳いでいる。'); ?>"/>
+                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/price-img2.jpeg')); ?>" alt="<?php echo esc_attr('写真:暗闇に浮かぶ色とりどりの三角形の光。'); ?>"/>
                 </div>
                 <div class="price__items">
                     <?php
@@ -429,7 +426,7 @@
                     ?>
                 </div>
                 <div class="price__img-pc">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/price-img1.jpeg')); ?>" alt="<?php echo esc_attr('写真:海の中でたくさんの魚がサンゴのそばを泳いでいる。'); ?>"/>
+                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/price-img1.jpeg')); ?>" alt="<?php echo esc_attr('写真:メガネをかけている老婦人の前に立ち止まるふたり。'); ?>"/>
                 </div>
             </div>
             <div class="price__button">

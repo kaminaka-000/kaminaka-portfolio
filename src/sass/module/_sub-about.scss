@@ -49,6 +49,10 @@
 
 .sub-about__body {
     margin-top: rem(40);
+    font-family: $accent-font-family;
+    text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666,
+    1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666,
+    0 -1px 0 #666666;
     @include mq(md){
         display: flex;
         margin-top: 0;
@@ -57,7 +61,6 @@
         position: absolute;
         top: 22%;
         align-items: center;
-
         left: calc(50% - min(39vw, 21rem));
     }
 }
@@ -65,7 +68,6 @@
 .sub-about__title {
     position: absolute;
     font-size: rem(40);
-    font-family: $accent-font-family;
     line-height: 1;
     color: $white;
     top: 6%;

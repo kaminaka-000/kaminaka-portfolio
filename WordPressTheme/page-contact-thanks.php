@@ -10,8 +10,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/common/sub-contact-mv-pc.jpeg')); ?>"/>
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/sub-contact-mv.jpeg')); ?>" alt="写真:波打ち際。" />
+              <source media="(min-width: 768px)" srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/common/abstract8.jpeg')); ?>"/>
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/abstract88.jpeg')); ?>" alt="写真:鮮やかな色彩と幾何学的な形が組み合わさった抽象画。" />
             </picture>
           </div>
         </div>

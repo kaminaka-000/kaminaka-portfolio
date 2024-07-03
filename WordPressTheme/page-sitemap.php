@@ -8,8 +8,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sitemap-mv-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sitemap-mv.jpeg" alt="写真:サンゴ礁の上を泳ぐカラフルな熱帯魚の群れ。" />
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract9.jpeg"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract99.jpeg" alt="写真:燃えるような赤と黄の大胆なストロークが交差する抽象画。" />
             </picture>
           </div>
         </div>

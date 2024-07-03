@@ -10,8 +10,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-about-img-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-about-img.jpeg" alt="写真:青空を背にした鮮やかな黄色のシーサーの像。" />
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract2.jpeg"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract22.jpeg" alt="写真:鮮やかな色彩が調和する抽象画。" />
             </picture>
           </div>
         </div>
@@ -26,14 +26,14 @@
         <div class="sub-about__inner inner">
             <div class="sub-about__img">
               <div class="sub-about__img-small">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/about1.jpeg" alt="真:屋根に乗っているシーサー。"/>
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/about-20.jpeg" alt="写真:美術館の展示室で、様々な絵画が壁に掛けられている。"/>
               </div>
               <div class="sub-about__img-large">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/about2.jpeg" alt="写真:海の中を泳ぐ二匹の熱帯魚。"/>
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/about22.jpeg" alt="写真:美術館の内部、モダンなデザインの曲線を描く白い通路と照明パネルが設置された天井。"/>
               </div>
             </div>
             <div class="sub-about__body">
-              <p class="sub-about__title">Dive into <br />the Ocean</p>
+              <p class="sub-about__title">Discover <br/>Art Today</p>
               <div class="sub-about__box">
                 <p class="sub-about__text">
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>

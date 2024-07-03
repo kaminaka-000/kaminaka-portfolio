@@ -7,7 +7,7 @@
 .sub-layout::before {
     position: absolute;
     content: "";
-    background-image: url(../images/common/voice-design1.svg);
+    background-image: url(../images/common/lotus5.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
     @include mq(md){
         max-width: rem(301);
         height: rem(138);
-        top: rem(-70);
+        top: rem(-100);
     }
 }
 
@@ -28,7 +28,7 @@
 //modifier
 .sub-layout--about::before {
     @include mq(md){
-        top: rem(-150);
+        top: rem(-190);
     }
 }
 

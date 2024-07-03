@@ -9,8 +9,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/common/sub-voice-mv-pc.jpeg')); ?>"/>
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/sub-voice-mv.jpeg')); ?>" alt="写真:海面でダイビングをしている5人の人たち。"/>
+              <source media="(min-width: 768px)" srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/common/abstract5.jpeg')); ?>"/>
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/abstract55.jpeg')); ?>" alt="写真:鮮やかな色彩とエネルギッシュな筆致で構成された抽象画。"/>
             </picture>
           </div>
         </div>
