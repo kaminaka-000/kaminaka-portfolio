@@ -9,8 +9,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-mv-img-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-mv-img.jpeg" alt="写真:海の中を泳ぐ二匹の黄色い熱帯魚。"/>
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common//abstract1.jpeg"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract11.jpeg" alt="写真:海の中を泳ぐ二匹の黄色い熱帯魚。"/>
             </picture>
           </div>
         </div>
@@ -80,25 +80,20 @@
                         <h2 class="info-card__title info-card__title--sub">
                           <?php echo esc_html(get_the_title()); ?>
                         </h2>
-                        <p class="info-card__lead">全部コミコミ(お一人様)</p>
+                        <p class="info-card__lead">期間限定展示</p>
                         <div class="info-card__layout">
                           <?php
-                            // グループフィールド「campaign_info」を取得
-                            $campaign_info = get_field('campaign_info');
-                            if ($campaign_info) {
-                              // グループ内の各フィールドを取得
-                              $list_price = $campaign_info['campaign-list-price'];
-                              $discount_price = $campaign_info['campaign-discount-price'];
+                          // フィールド「作品名」を取得
+                          $art_name = get_field('campaign-discount-price');
                           ?>
-                            <!-- 定価の表示 -->
-                            <div class="info-card__before">
-                              <span><?php echo esc_html($list_price ? '￥' . number_format($list_price) : '準備中'); ?></span>
-                            </div>
-                            <!-- 値引き後の金額の表示 -->
-                            <div class="info-card__after info-card__after--sub">
-                              <span><?php echo esc_html($discount_price ? '￥' . number_format($discount_price) : '準備中'); ?></span>
-                            </div>
-                          <?php } ?>
+                          <!-- 作品名の表示 -->
+                          <div class="info-card__before">
+                            <span>作品名</span>
+                          </div>
+                          <!-- 作品名の表示 -->
+                          <div class="info-card__after info-card__after--sub">
+                            <span><?php echo esc_html($art_name ? $art_name : '準備中'); ?></span>
+                          </div>
                         </div>
                         <div class="info-card__pc u-desktop">
                           <?php

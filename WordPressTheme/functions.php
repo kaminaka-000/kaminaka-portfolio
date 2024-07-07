@@ -226,7 +226,7 @@ function display_thumbnail_column($column, $post_id) {
       $post_thumbnail_id = get_post_thumbnail_id($post_id);
       if ($post_thumbnail_id) {
           $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'medium');
-          echo '<img src="' . esc_url($post_thumbnail_img[0]) . '" width="150" height="120" />';
+          echo '<img src="' . esc_url($post_thumbnail_img[0]) . '" width="150" height="120" style="object-fit: cover;"/>';
       } else {
           echo '—';
       }
@@ -410,3 +410,17 @@ function hide_custom_post_type_editors() {
   }
 }
 add_action('admin_head', 'hide_custom_post_type_editors');
+
+
+function change_title_placeholder_text( $title ){
+  $screen = get_current_screen();
+
+  if ( 'campaign' == $screen->post_type ) {
+      $title = '作品名をこちらに入力してください'; // プレースホルダーテキストをここで設定
+  }
+
+  return $title;
+}
+add_filter( 'enter_title_here', 'change_title_placeholder_text' );
+
+

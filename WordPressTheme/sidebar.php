@@ -5,7 +5,7 @@
         <ul class="sidebar__list">
             <li class="sidebar__item">
                 <div class="sidebar__container">
-                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/home-blog-icon.svg" alt="" />
+                    <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/common/lotus4.svg" alt="" />
                     <h2 class="sidebar__sidebar-title">人気記事</h2>
                 </div>
                 <div class="sidebar__popular sidebar-popular">
@@ -45,7 +45,7 @@
             </li>
             <li class="sidebar__item">
                 <div class="sidebar__container">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/home-blog-icon.svg')); ?>" alt="" />
+                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/lotus4.svg')); ?>" alt="" />
                     <h2 class="sidebar__sidebar-title">口コミ</h2>
                 </div>
                 <div class="sidebar__review sidebar-review">
@@ -96,8 +96,8 @@
             </li>
             <li class="sidebar__item">
                 <div class="sidebar__container">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/home-blog-icon.svg')); ?>" alt="" />
-                    <h2 class="sidebar__sidebar-title">キャンペーン</h2>
+                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/lotus4.svg')); ?>" alt="" />
+                    <h2 class="sidebar__sidebar-title">作品紹介</h2>
                 </div>
                 <div class="sidebar__cards sidebar-cards">
                     <?php
@@ -115,34 +115,28 @@
                             <?php
                             // アイキャッチ画像が設定されていればそのURLを使用
                             if (has_post_thumbnail()) {
-                                $image_url = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));
-                                $image_alt = esc_attr(get_the_title()); // 代替テキストとして投稿のタイトルを使用
+                                $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                                $image_alt = get_the_title(); // 代替テキストとして投稿のタイトルを使用
                             } else {
                                 // アイキャッチ画像が設定されていない場合はデフォルト画像のURLを指定
-                                $image_url = esc_url(get_theme_file_uri('/assets/images/common/no_image.jpeg'));
-                                $image_alt = esc_attr('画像がありません。'); // 代替テキスト
+                                $image_url = get_theme_file_uri('/assets/images/common/no_image.jpeg');
+                                $image_alt = '画像がありません。'; // 代替テキスト
                             }
                             // 画像タグの出力
                             echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($image_alt) . '"/>';
                             ?>
                         </div>
                         <div class="sidebar-card__content">
-                            <h3 class="sidebar-card__title"><?php echo esc_html(get_the_title()); ?></h3>
-                            <p class="sidebar-card__lead">全部コミコミ(お一人様)</p>
+                            <h3 class="sidebar-card__title"><?php the_title(); ?></h3>
+                            <p class="sidebar-card__lead">期間限定展示</p>
                             <div class="sidebar-card__layout">
                                 <?php
-                                // グループフィールド「campaign_info」を取得
-                                $campaign_info = get_field('campaign_info');
-                                if ($campaign_info) {
-                                    // グループ内の各フィールドを取得
-                                    $list_price = $campaign_info['campaign-list-price'];
-                                    $discount_price = $campaign_info['campaign-discount-price'];
+                                $discount_price = get_field('campaign-discount-price');
                                 ?>
                                 <div class="sidebar-card__before">
-                                    <span><?php echo esc_html($list_price ? '￥' . number_format($list_price) : '準備中'); ?></span>
+                                    <span>作者</span>
                                 </div>
-                                <div class="sidebar-card__after"><?php echo esc_html($discount_price ? '￥' . number_format($discount_price) : '準備中'); ?></div>
-                                <?php } ?>
+                                <div class="sidebar-card__after"><?php echo esc_html($discount_price ? $discount_price : '準備中'); ?></div>
                             </div>
                         </div>
                     </div>
@@ -160,7 +154,7 @@
             </li>
             <li class="sidebar__item">
                 <div class="sidebar__container">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/home-blog-icon.svg')); ?>" alt="ホームブログアイコン" />
+                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/lotus4.svg')); ?>" alt="ホームブログアイコン" />
                     <h2 class="sidebar__sidebar-title">アーカイブ</h2>
                 </div>
                 <ul class="sidebar__archive sidebar-archive">

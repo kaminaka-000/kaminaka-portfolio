@@ -113,13 +113,21 @@
                             // 説明文とキャンペーン期間を取得
                             $description = $campaign_text['campaign-description'];
                             $period = $campaign_text['campaign-period'];
-                            // 説明文をトリミング（必要に応じて文字数を制限）
-                            $trimmed_description = mb_substr($description, 0, 165);
+
                             ?>
                             <!-- 説明文の表示 -->
                             <p class="info-card__text">
-                            <?php echo nl2br(esc_html($trimmed_description ? $trimmed_description : 'テキスト準備中')); ?>
+                            <?php echo nl2br(esc_html($description ? $description : 'テキスト準備中')); ?>
                             </p>
+                            <?php
+                                // 引用元のテキストとURLを取得
+                                $quote_source_text = $campaign_text['campaign-source-text'];
+                                $quote_source_url = $campaign_text['campaign-source-url'];
+                                if ($quote_source_text && $quote_source_url) :
+                                ?>
+                                <!-- 引用元の表示 -->
+                                <p class="info-card__url">引用元: <a href="<?php echo esc_url($quote_source_url); ?>" target="_blank"><?php echo esc_html($quote_source_text); ?></a></p>
+                            <?php endif; ?>
                             <?php
                             // キャンペーン期間の開始日と終了日を取得
                             if (!empty($period['start_date']) && !empty($period['end_date'])) {

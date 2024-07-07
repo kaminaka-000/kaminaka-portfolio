@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .nav__inner {
-  max-width: rem(375);
+  max-width: rem(325);
   width: 100%;
   padding: 0 rem(15);
   margin-inline: auto;
@@ -12,7 +12,6 @@
 .nav__area {
   padding-bottom: rem(104);
   gap: 0;
-  width: rem(330);
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(2, auto);
@@ -62,8 +61,6 @@
   color: $white;
   font-weight: 400;
   transition: all 0.3s ease 0s;
-
-  white-space: nowrap;
 }
 
 .nav__item a:hover {
@@ -105,7 +102,6 @@
 .nav__inner--footer {
   overflow: visible;
   height: auto;
-  padding: 0;
   @include mq(md){
     max-width: none;
   }
@@ -114,7 +110,6 @@
 .nav__area--footer {
   gap: 0 rem(6);
   padding-bottom: rem(0);
-  width: rem(345);
   @include mq(md) {
     display: flex;
     gap: 0;

@@ -105,12 +105,8 @@
     height: rem(60);
     @include mq(md){
         width: 67%;
-        text-align: left;
+        text-align: center;
     }
-}
-
-.sub-price__cost {
-    text-align: right;
 }
 
 .sub-price__type {

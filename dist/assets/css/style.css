@@ -290,7 +290,7 @@ footer.footer.top-footer--not-found {
 .archive-item__past::before,
 .archive-item__link::before {
 	border-bottom: 0.625rem solid transparent;
-	border-left: 1.125rem solid #408F95;
+	border-left: 1.125rem solid #1E465A;
 	border-top: 0.625rem solid transparent;
 	content: "";
 	display: inline-block;
@@ -394,7 +394,7 @@ footer.footer.top-footer--not-found {
 }
 
 .article-body__content li::before {
-	background-image: url(../images/common/single-blog-starfish.svg);
+	background-image: url(../images/common/flower1.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -1533,7 +1533,7 @@ footer.footer.top-footer--not-found {
 
 .info-card__title {
 	flex-grow: 1;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 1.5;
 	margin-top: 0.25rem;
@@ -1541,7 +1541,7 @@ footer.footer.top-footer--not-found {
 
 .info-card__lead {
 	border-top: 1px solid #1E465A;
-	font-size: 0.875rem;
+	font-size: 1rem;
 	line-height: 1.71429;
 	margin-top: 0.375rem;
 	padding-top: 0.5rem;
@@ -1568,13 +1568,17 @@ footer.footer.top-footer--not-found {
 	color: #1E465A;
 	display: flex;
 	font-family: "Lato", sans-serif;
-	font-size: 2rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1;
 }
 
 .info-card__pc {
 	display: none;
+}
+
+.info-card__url a {
+	color: #39A0FF;
 }
 
 .info-card__date {
@@ -1757,7 +1761,7 @@ footer.footer.top-footer--not-found {
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 23.4375rem;
+	max-width: 20.3125rem;
 	overflow: scroll;
 	padding: 0 0.9375rem;
 	width: 100%;
@@ -1770,7 +1774,6 @@ footer.footer.top-footer--not-found {
 	grid-auto-flow: column;
 	grid-template-rows: repeat(2, auto);
 	padding-bottom: 6.5rem;
-	width: 20.625rem;
 }
 
 .nav__content {
@@ -1789,7 +1792,6 @@ footer.footer.top-footer--not-found {
 	font-weight: 400;
 	line-height: 1.125;
 	transition: all 0.3s ease 0s;
-	white-space: nowrap;
 }
 
 .nav__item a:hover {
@@ -1830,13 +1832,11 @@ footer.footer.top-footer--not-found {
 .nav__inner--footer {
 	height: auto;
 	overflow: visible;
-	padding: 0;
 }
 
 .nav__area--footer {
 	gap: 0 0.375rem;
 	padding-bottom: 0rem;
-	width: 21.5625rem;
 }
 
 .nav__area--sitemap {
@@ -1869,7 +1869,7 @@ footer.footer.top-footer--not-found {
 }
 
 .not-found__inner::after {
-	background-image: url(../images/common/not-found-img.svg);
+	background-image: url(../images/common/lotus7.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -2202,14 +2202,14 @@ footer.footer.top-footer--not-found {
 
 .sidebar-card__title {
 	flex-grow: 1;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: 500;
 	line-height: 1.5;
 }
 
 .sidebar-card__lead {
 	border-top: 1px solid #1E465A;
-	font-size: 0.875rem;
+	font-size: 1rem;
 	line-height: 1.71429;
 	margin-top: 0.375rem;
 	padding-top: 0.5rem;
@@ -2217,7 +2217,7 @@ footer.footer.top-footer--not-found {
 }
 
 .sidebar-card__layout {
-	align-items: center;
+	align-items: flex-end;
 	display: flex;
 	gap: 1rem;
 	justify-content: center;
@@ -2230,25 +2230,13 @@ footer.footer.top-footer--not-found {
 	font-weight: 700;
 	line-height: 1;
 	margin-top: 0.3125rem;
-}
-
-.sidebar-card__before span {
-	position: relative;
-}
-
-.sidebar-card__before span::after {
-	border-top: 3px solid #c94800;
-	content: "";
-	left: 0;
-	position: absolute;
-	top: 50%;
-	width: 103%;
+	white-space: nowrap;
 }
 
 .sidebar-card__after {
 	color: #1E465A;
 	font-family: "Lato", sans-serif;
-	font-size: 2rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1;
 }
@@ -2390,7 +2378,6 @@ footer.footer.top-footer--not-found {
 .sub-about__body {
 	font-family: "Lora", sans-serif;
 	margin-top: 2.5rem;
-	text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666, 1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666, 0 -1px 0 #666666;
 }
 
 .sub-about__title {
@@ -2399,6 +2386,7 @@ footer.footer.top-footer--not-found {
 	line-height: 1;
 	margin-left: 1.5rem;
 	position: absolute;
+	text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666, 1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666, 0 -1px 0 #666666;
 	top: 6%;
 }
 
@@ -2608,10 +2596,6 @@ footer.footer.top-footer--not-found {
 .sub-price__data {
 	height: 3.75rem;
 	width: 70%;
-}
-
-.sub-price__cost {
-	text-align: right;
 }
 
 .sub-price__detail {
@@ -3306,7 +3290,7 @@ footer.footer.top-footer--not-found {
 }
 
 .contact__logo {
-	max-width: 10.5625rem;
+	max-width: 12.5rem;
 }
 
 .contact__layout {
@@ -3351,13 +3335,13 @@ footer.footer.top-footer--not-found {
 
 .contact__line {
 	background-color: #1E465A;
-	height: 18.9375rem;
+	height: 19.9375rem;
 	margin-top: 5rem;
 	width: 1px;
 }
 
 .contact__box {
-	padding: 8.25rem 7rem 6.1875rem 5.0625rem;
+	padding: 6.25rem 7rem 6.1875rem 5.0625rem;
 }
 
 .contact__title {
@@ -3662,11 +3646,12 @@ footer.footer.top-footer--not-found {
 }
 
 .info-card__title {
+	font-size: 1.4375rem;
 	margin-top: 0.3125rem;
 }
 
 .info-card__lead {
-	font-size: 1rem;
+	font-size: 1.125rem;
 	line-height: 1.5;
 	margin-right: 0.625rem;
 	padding-top: 1rem;
@@ -3677,13 +3662,13 @@ footer.footer.top-footer--not-found {
 }
 
 .info-card__before {
-	font-size: 1.5rem;
+	font-size: 1.4375rem;
 	margin-top: 0.75rem;
 	min-width: 0;
 }
 
 .info-card__after {
-	font-size: 1.5rem;
+	font-size: 1.4375rem;
 	margin-left: 1.625rem;
 	max-width: 10.5rem;
 	width: 100%;
@@ -3972,6 +3957,7 @@ footer.footer.top-footer--not-found {
 	color: #fff;
 	margin-top: 0;
 	max-width: 25rem;
+	text-shadow: 1px 1px 0 #666666, -1px -1px 0 #666666, -1px 1px 0 #666666, 1px -1px 0 #666666, 1px 0 0 #666666, -1px 0 0 #666666, 0 1px 0 #666666, 0 -1px 0 #666666;
 	width: 100%;
 }
 
@@ -4071,7 +4057,7 @@ footer.footer.top-footer--not-found {
 }
 
 .sub-price__data {
-	text-align: left;
+	text-align: center;
 	width: 67%;
 }
 

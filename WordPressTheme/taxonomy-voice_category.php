@@ -9,8 +9,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-voice-mv-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-voice-mv.jpeg" alt="写真:海の中を泳ぐ二匹の黄色い熱帯魚。"/>
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract5.jpeg"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract55.jpeg" alt="写真:海の中を泳ぐ二匹の黄色い熱帯魚。"/>
             </picture>
           </div>
         </div>

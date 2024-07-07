@@ -46,7 +46,7 @@
                       <li class="nav__item">
                         <a href="<?php echo $campaign; ?>">
                           <div class="nav__item-wrapper nav__item-wrapper--sitemap">
-                            <span>キャンペーン</span>
+                            <span>作品紹介</span>
                           </div>
                         </a>
                       </li>
@@ -69,7 +69,7 @@
                       <li class="nav__item">
                         <a href="<?php echo $about_us; ?>">
                           <div class="nav__item-wrapper nav__item-wrapper--sitemap">
-                            <span>私たちについて</span>
+                            <span>当館について</span>
                           </div>
                         </a>
                       </li>
@@ -82,18 +82,18 @@
                       <li class="nav__item">
                         <a href="<?php echo $information; ?>">
                           <div class="nav__item-wrapper nav__item-wrapper--sitemap">
-                            <span>ダイビング情報</span>
+                            <span>展示情報</span>
                           </div>
                         </a>
                       </li>
                       <li class="nav__item">
-                        <a href="<?php echo $information; ?>?tab=tab01">ライセンス講習</a>
+                        <a href="<?php echo $information; ?>?tab=tab01">常設展示</a>
                       </li>
                       <li class="nav__item">
-                        <a href="<?php echo $information; ?>?tab=tab03">体験ダイビング</a>
+                        <a href="<?php echo $information; ?>?tab=tab03">特別展示</a>
                       </li>
                       <li class="nav__item">
-                        <a href="<?php echo $information; ?>?tab=tab02">ファンダイビング</a>
+                        <a href="<?php echo $information; ?>?tab=tab02">ワークショップ</a>
                       </li>
                     </ul>
                   </div>
@@ -131,13 +131,13 @@
                         </a>
                       </li>
                       <li class="nav__item">
-                        <a href="<?php echo $price; ?>#sub-price-license">ライセンス講習</a>
+                        <a href="<?php echo $price; ?>#sub-price-license">入館料</a>
                       </li>
                       <li class="nav__item">
-                        <a href="<?php echo $price; ?>#sub-price-experience">体験ダイビング</a>
+                        <a href="<?php echo $price; ?>#sub-price-experience">特別展</a>
                       </li>
                       <li class="nav__item">
-                        <a href="<?php echo $price; ?>#sub-price-fan">ファンダイビング</a>
+                        <a href="<?php echo $price; ?>#sub-price-fan">年間パスポート</a>
                       </li>
                     </ul>
                   </div>

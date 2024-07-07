@@ -119,7 +119,7 @@
                       <a href="<?php echo esc_url($information . '?tab=tab03'); ?>">特別展示</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($information . '?tab=tab02'); ?>">イベント</a>
+                      <a href="<?php echo esc_url($information . '?tab=tab02'); ?>">ワークショップ</a>
                     </li>
                   </ul>
                 </div>
@@ -160,7 +160,7 @@
                       <a href="<?php echo esc_url($price . '#sub-price-license'); ?>">入館料</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo esc_url($price . '#sub-price-experience'); ?>">特別展<br class="u-mobile">（入館料を含む）</a>
+                      <a href="<?php echo esc_url($price . '#sub-price-experience'); ?>">特別展</a>
                     </li>
                     <li class="nav__item">
                       <a href="<?php echo esc_url($price . '#sub-price-fan'); ?>">年間パスポート</a>

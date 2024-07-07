@@ -52,8 +52,8 @@
 
               // 画像がなかった場合のデフォルト画像表示
               if (!$has_images) {
-                $default_pc_image_url = esc_url(get_theme_file_uri('/assets/images/common/mv-main-pc.jpeg')); // デフォルトPC画像のパスを指定
-                $default_sp_image_url = esc_url(get_theme_file_uri('/assets/images/common/mv-main.jpeg')); // デフォルトSP画像のパスを指定
+                $default_pc_image_url = esc_url(get_theme_file_uri('/assets/images/common/lotus-pond.jpeg')); // デフォルトPC画像のパスを指定
+                $default_sp_image_url = esc_url(get_theme_file_uri('/assets/images/common/lotus-pond-sp.jpeg')); // デフォルトSP画像のパスを指定
                 echo '<div class="swiper-slide mv__img">';
                 echo '<picture>';
                 echo '<source media="(min-width: 768px)" srcset="' . $default_pc_image_url . '"/>';
@@ -120,7 +120,7 @@
                           $discount_price = get_field('campaign-discount-price');
                           ?>
                           <div class="info-card__before">
-                            <span>作品名</span>
+                            <span>作者</span>
                           </div>
                           <div class="info-card__after info-card__after--sub">
                             <span><?php echo esc_html($discount_price ? ($discount_price) : '準備中'); ?></span>
@@ -169,8 +169,7 @@
                 <p class="image-design__title">Discover <br/>Art Today</p>
                 <div class="image-design__box">
                   <p class="image-design__text">
-                  ここでしか味わえない斬新なアート作品に触れ、新たなインスピレーションを得てください。創造力を刺激する多彩な展示が、あなたを待ち受けています。<br/>
-                  多様な視点からアートを楽しむことで、あなたの感性が豊かに広がります。現代アートの新しい波を、ぜひともご体験ください。
+                      蓮の池のほとりに位置する蓮池美術館では、静かな水面に映る美しい風景と共に、心に響くアート作品を鑑賞できます。<br>自然とアートの融合を感じながら、新しいインスピレーションを見つけてください。
                   </p>
                   <div class="image-design__button">
                     <a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="button"><span>View more</span></a>

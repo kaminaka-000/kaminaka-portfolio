@@ -15,8 +15,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-blog-mv-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sub-blog-mv.jpeg" alt="写真:水中で群れをなす無数の魚が海の光に照らされている。" />
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract4.jpeg"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/abstract44.jpeg" alt="写真:青と茶色のぼかしがかった色調で描かれた抽象画。" />
             </picture>
           </div>
         </div>
