@@ -83,16 +83,16 @@
                         <p class="info-card__lead">期間限定展示</p>
                         <div class="info-card__layout">
                           <?php
-                          // フィールド「作品名」を取得
-                          $art_name = get_field('campaign-discount-price');
+                          // フィールド「作者名」を取得
+                          $discount_price = get_field('campaign-discount-price');
                           ?>
-                          <!-- 作品名の表示 -->
+                          <!-- 作者名の表示 -->
                           <div class="info-card__before">
-                            <span>作品名</span>
+                            <span>作者</span>
                           </div>
                           <!-- 作品名の表示 -->
                           <div class="info-card__after info-card__after--sub">
-                            <span><?php echo esc_html($art_name ? $art_name : '準備中'); ?></span>
+                            <span><?php echo nl2br(esc_html($discount_price ? $discount_price : '準備中')); ?></span>
                           </div>
                         </div>
                         <div class="info-card__pc u-desktop">
@@ -104,11 +104,10 @@
                               $description = $campaign_text['campaign-description'];
                               $period = $campaign_text['campaign-period'];
                               // 説明文をトリミング（必要に応じて文字数を制限）
-                              $trimmed_description = mb_substr($description, 0, 165);
                           ?>
                             <!-- 説明文の表示 -->
                             <p class="info-card__text">
-                                <?php echo nl2br(esc_html($trimmed_description ? $trimmed_description : 'テキスト準備中')); ?>
+                                <?php echo nl2br(esc_html($description ? $description : 'テキスト準備中')); ?>
                             </p>
                             <?php
                             // キャンペーン期間の開始日と終了日を取得
@@ -130,7 +129,7 @@
                                 </p>
                             <?php } ?>
                             <?php } ?>
-                          <p class="info-card__button-text">ご予約・お問い合わせはコチラ</p>
+                          <p class="info-card__button-text">感想・お問い合わせはコチラ</p>
                           <div class="info-card__button">
                             <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button"><span>Contact us</span></a>
                           </div>

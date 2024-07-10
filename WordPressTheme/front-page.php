@@ -123,7 +123,7 @@
                             <span>作者</span>
                           </div>
                           <div class="info-card__after info-card__after--sub">
-                            <span><?php echo esc_html($discount_price ? ($discount_price) : '準備中'); ?></span>
+                            <span><?php echo nl2br(esc_html($discount_price ? $discount_price : '準備中')); ?></span>
                           </div>
                         </div>
                       </div>

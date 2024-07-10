@@ -26,7 +26,7 @@
       <div class="header__inner">
         <div class="header__logo">
           <a href="<?php echo esc_url(home_url()); ?>">
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/art-logo77.png')); ?>" alt="ロゴ:かみなか美術館" />
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/art-logo.png')); ?>" alt="ロゴ:蓮池美術館" />
           </a>
         </div>
         <button class="header__hamburger header-hamburger js-header-hamburger">

@@ -19,7 +19,7 @@
           <div class="contact__layout">
             <div class="contact__wrapper">
               <div class="contact__logo">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/art-logo78.png" alt="ロゴ:蓮池美術館"/>
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/art-logo2.png" alt="ロゴ:蓮池美術館"/>
               </div>
               <div class="contact__address">
                 <address class="contact__body">
@@ -61,7 +61,7 @@
         <div class="footer__group">
           <div class="footer__logo">
             <a href="<?php echo home_url(); ?>">
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/art-logo77.png" alt="ロゴ:かみなか美術館"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/art-logo.png" alt="ロゴ:蓮池美術館"/>
             </a>
           </div>
           <div class="footer__icons">
@@ -175,15 +175,16 @@
                         </div>
                       </a>
                     </li>
-                    <li class="nav__item">
-                      <a href="<?php echo $price; ?>#sub-price-license">入館料</a>
-                    </li>
-                    <li class="nav__item">
-                      <a href="<?php echo $price; ?>#sub-price-experience">特別展</a>
-                    </li>
-                    <li class="nav__item">
-                      <a href="<?php echo $price; ?>#sub-price-fan">年間パスポート</a>
-                    </li>
+                    <?php
+            $scf_titles = get_scf_section_titles();
+            if (!empty($scf_titles)) {
+                foreach ($scf_titles as $section_id => $title) {
+                    if (!empty($title)) {
+                        echo '<li class="nav__item"><a href="' . esc_url($price) . '#' . esc_attr($section_id) . '">' . esc_html($title) . '</a></li>';
+                    }
+                }
+            }
+        ?>
                   </ul>
                 </div>
               </div>

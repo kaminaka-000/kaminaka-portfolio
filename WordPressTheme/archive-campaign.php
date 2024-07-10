@@ -40,93 +40,84 @@
 
             <!-- 投稿のリスト -->
             <ul class="sub-campaign__cards sub-cards">
-                <?php
-                // カスタムクエリを使用してキャンペーン投稿を取得
-                $args = array(
-                    'post_type' => 'campaign', // カスタム投稿タイプのスラッグ
-                    'posts_per_page' => -1,
-                );
-                $custom_query = new WP_Query($args);
-                ?>
-
-                <?php while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-                    <li class="sub-cards__info-card">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                <li class="sub-cards__info-card">
                     <div class="info-card">
-                        <!-- アイキャッチ画像の表示 -->
-                        <div class="info-card__img">
+                    <!-- アイキャッチ画像の表示 -->
+                    <div class="info-card__img">
                         <?php
                         // アイキャッチ画像が設定されているかチェック
                         if (has_post_thumbnail()) {
-                            // アイキャッチ画像のURLと代替テキストを取得
-                            $image_url = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));
-                            $image_alt = esc_attr(get_the_title() . 'のアイキャッチ画像。'); // 代替テキストとして投稿のタイトルを使用し、その後に「のアイキャッチ画像」を追加
+                        // アイキャッチ画像のURLと代替テキストを取得
+                        $image_url = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'full'));
+                        $image_alt = esc_attr(get_the_title() . 'のアイキャッチ画像。'); // 代替テキストとして投稿のタイトルを使用
                         } else {
-                            // アイキャッチ画像がない場合はデフォルト画像のURLと代替テキストを設定
-                            $image_url = esc_url(get_theme_file_uri('/assets/images/common/no_image.jpeg'));
-                            $image_alt = esc_attr('画像がありません。'); // 代替テキスト
+                        // アイキャッチ画像がない場合はデフォルト画像のURLと代替テキストを設定
+                        $image_url = esc_url(get_theme_file_uri('/assets/images/common/no_image.jpeg'));
+                        $image_alt = esc_attr('画像がありません。'); // 代替テキスト
                         }
                         // 画像タグの出力
                         echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($image_alt) . '"/>';
                         ?>
-                        </div>
-                        <!-- 投稿コンテンツの表示 -->
-                        <div class="info-card__content info-card__content--sub">
+                    </div>
+                    <!-- 投稿コンテンツの表示 -->
+                    <div class="info-card__content info-card__content--sub">
                         <div class="info-card__wrapper">
-                            <?php
-                            // 現在の投稿に関連付けられているターム（カテゴリー）を取得
-                            $terms = get_the_terms(get_the_ID(), 'campaign_category');
-                            if (!empty($terms) && !is_wp_error($terms)) :
-                            // ターム名を配列に追加
-                            $term_names = array_map(function($term) {
-                                return esc_html($term->name);
-                            }, $terms);
-                            // ターム名のリストをカンマ区切りで表示
-                            $term_list = join(', ', $term_names);
-                            ?>
-                            <!-- ターム（カテゴリー）の表示 -->
-                            <p class="info-card__category"><?php echo esc_html($term_list); ?></p>
-                            <?php endif; ?>
+                        <?php
+                        // 現在の投稿に関連付けられているターム（カテゴリー）を取得
+                        $terms = get_the_terms(get_the_ID(), 'campaign_category');
+                        if (!empty($terms) && !is_wp_error($terms)) :
+                        // ターム名を配列に追加
+                        $term_names = array_map(function($term) {
+                            return esc_html($term->name);
+                        }, $terms);
+                        // ターム名のリストをカンマ区切りで表示
+                        $term_list = join(', ', $term_names);
+                        ?>
+                        <!-- ターム（カテゴリー）の表示 -->
+                        <p class="info-card__category"><?php echo esc_html($term_list); ?></p>
+                        <?php endif; ?>
                         </div>
                         <!-- 投稿タイトルの表示 -->
                         <h2 class="info-card__title info-card__title--sub">
-                            <?php echo esc_html(get_the_title()); ?>
+                        <?php echo esc_html(get_the_title()); ?>
                         </h2>
                         <p class="info-card__lead">期間限定展示</p>
                         <div class="info-card__layout">
-                            <?php
-                            // フィールド「作品名」を取得
-                            $art_name = get_field('campaign-discount-price');
-                            ?>
-                            <!-- 作品名の表示 -->
-                            <div class="info-card__before">
-                            <span>作品名</span>
-                            </div>
-                            <div class="info-card__after info-card__after--sub">
-                            <span><?php echo esc_html($art_name ? $art_name : '準備中'); ?></span>
-                            </div>
+                        <?php
+                        // フィールド「作者名」を取得
+                        $discount_price = get_field('campaign-discount-price');
+                        ?>
+                        <!-- 作者名の表示 -->
+                        <div class="info-card__before">
+                            <span>作者</span>
+                        </div>
+                        <div class="info-card__after info-card__after--sub">
+                            <span><?php echo nl2br(esc_html($discount_price ? $discount_price : '準備中')); ?></span>
+                        </div>
                         </div>
                         <div class="info-card__pc u-desktop">
-                            <?php
-                            // グループフィールド「campaign_text」を取得
-                            $campaign_text = get_field('campaign_text');
-                            if ($campaign_text) {
+                        <?php
+                        // グループフィールド「campaign_text」を取得
+                        $campaign_text = get_field('campaign_text');
+                        if ($campaign_text) {
                             // 説明文とキャンペーン期間を取得
                             $description = $campaign_text['campaign-description'];
                             $period = $campaign_text['campaign-period'];
-
-                            ?>
+                        ?>
                             <!-- 説明文の表示 -->
                             <p class="info-card__text">
                             <?php echo nl2br(esc_html($description ? $description : 'テキスト準備中')); ?>
                             </p>
                             <?php
-                                // 引用元のテキストとURLを取得
-                                $quote_source_text = $campaign_text['campaign-source-text'];
-                                $quote_source_url = $campaign_text['campaign-source-url'];
-                                if ($quote_source_text && $quote_source_url) :
-                                ?>
-                                <!-- 引用元の表示 -->
-                                <p class="info-card__url">引用元: <a href="<?php echo esc_url($quote_source_url); ?>" target="_blank"><?php echo esc_html($quote_source_text); ?></a></p>
+                            // 引用元のテキストとURLを取得
+                            $quote_source_text = $campaign_text['campaign-source-text'];
+                            $quote_source_url = $campaign_text['campaign-source-url'];
+                            if ($quote_source_text && $quote_source_url) :
+                            ?>
+                            <!-- 引用元の表示 -->
+                            <p class="info-card__url">引用元: <a href="<?php echo esc_url($quote_source_url); ?>" target="_blank"><?php echo esc_html($quote_source_text); ?></a></p>
                             <?php endif; ?>
                             <?php
                             // キャンペーン期間の開始日と終了日を取得
@@ -144,34 +135,37 @@
                             ?>
                             <!-- キャンペーン期間の表示 -->
                             <p class="info-card__date">
-                                <?php echo esc_html($start_date_formatted . ' - ' . $end_date_formatted); ?>
+                            <?php echo esc_html($start_date_formatted . ' - ' . $end_date_formatted); ?>
                             </p>
                             <?php } ?>
                             <?php } ?>
                             <!-- ボタンの表示 -->
-                            <p class="info-card__button-text">ご予約・お問い合わせはコチラ</p>
+                            <p class="info-card__button-text">感想・お問い合わせはコチラ</p>
                             <div class="info-card__button">
                             <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button"><span>Contact us</span></a>
                             </div>
                         </div>
-                        </div>
                     </div>
-                    </li>
-                <?php endwhile; wp_reset_postdata(); ?>
-                </ul>
+                    </div>
+                </li>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <p>投稿がありません。</p>
+            <?php endif; ?>
+            </ul>
 
             <!-- ページネーション -->
             <div class="pagenavi sub-pagenavi-spacing">
-                <?php wp_pagenavi(); ?>
+            <?php wp_pagenavi(); ?>
             </div>
 
+                </div>
+                </div>
+            </section>
+            <?php else : ?>
+                <div class="sub-cards__content">
+                <p class="sub-cards__text">投稿がありません。</p>
             </div>
-        </div>
-        </section>
-        <?php else : ?>
-        <div class="sub-cards__content">
-        <p class="sub-cards__text">投稿がありません。</p>
-        </div>
         <?php endif; ?>
 
 

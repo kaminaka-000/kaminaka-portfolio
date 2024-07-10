@@ -7,6 +7,8 @@
   margin-inline: auto;
   height: 100%;
   overflow: scroll;
+
+  max-width: rem(352);
 }
 
 .nav__area {
@@ -22,14 +24,14 @@
 
 .nav__section:nth-child(2) {
   @include mq(md){
-    margin-left: rem(102);
+    margin-left: rem(90);
   }
 }
 
 .nav__section:nth-child(3),
 .nav__section:nth-child(4) {
   @include mq(md){
-    margin-left: rem(88);
+    margin-left: rem(80);
   }
 }
 
@@ -45,7 +47,7 @@
 
 .nav__items {
   @include mq(md) {
-    width: rem(182);
+    width: rem(187);
   }
 }
 
@@ -132,3 +134,4 @@
 .nav__item-wrapper--sitemap::before {
   background-image: url(../images/common/sitemap-starfish.svg);
 }
+

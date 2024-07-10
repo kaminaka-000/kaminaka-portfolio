@@ -25,12 +25,12 @@
 }
 
 .popular-item__img {
-    aspect-ratio: 121/90;
-    max-width: rem(121);
+    width: 46%;
 }
 
 .popular-item__img img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    aspect-ratio: 121/90;
 }

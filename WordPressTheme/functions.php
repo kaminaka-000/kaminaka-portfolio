@@ -119,7 +119,7 @@ function filter_wpcf7_form_tag( $scanned_tag ) {
   if ( 'your-campaign' === $scanned_tag['name'] ) {
     $args = array(
       'post_type'      => 'campaign',
-      'posts_per_page' => 4,
+      'posts_per_page' => -1,
       'orderby'        => 'date',
       'order'          => 'DESC',
     );
@@ -423,4 +423,47 @@ function change_title_placeholder_text( $title ){
 }
 add_filter( 'enter_title_here', 'change_title_placeholder_text' );
 
+/*================================================================
+    作品紹介のnl2brで拾った<br>タグを<span>タグに変更し、cssを当てている
+================================================================ */
+function add_custom_js_to_footer() {
+  ?>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const brElements = document.querySelectorAll('.info-card__after br');
 
+      brElements.forEach(br => {
+          // Create a new span element to replace the <br> tag
+          const span = document.createElement('span');
+          span.style.display = 'block';
+          span.style.paddingTop = '3px';
+
+          // Get the next sibling text node and move its content into the span
+          const nextSibling = br.nextSibling;
+
+          if (nextSibling && nextSibling.nodeType === 3) { // 3 is a text node
+              span.textContent = nextSibling.textContent;
+              nextSibling.textContent = ''; // Clear the original text node
+          }
+
+          // Replace the <br> tag with the new span element
+          br.replaceWith(span);
+      });
+  });
+  </script>
+  <?php
+}
+add_action('wp_footer', 'add_custom_js_to_footer');
+
+//
+function get_scf_section_titles() {
+  $license_section_title = SCF::get('license_section_title');
+  $experience_section_title = SCF::get('experience_section_title');
+  $fun_section_title = SCF::get('fun_section_title');
+
+  return array(
+      'sub-price-license' => $license_section_title,
+      'sub-price-experience' => $experience_section_title,
+      'sub-price-fan' => $fun_section_title
+  );
+}

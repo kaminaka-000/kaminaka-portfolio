@@ -79,11 +79,10 @@
 
                             // タイトルの文字数を21文字に制限
                             $title = get_the_title();
-                            $trimmed_title = mb_substr($title, 0, 21);
                             ?>
-                            <h3 class="sidebar-review__title"><?php echo esc_html($trimmed_title); ?></h3>
+                            <h3 class="sidebar-review__title"><?php echo esc_html($title); ?></h3>
                             <div class="sidebar-review__button">
-                                <a href="<?php echo esc_url(get_permalink()); ?>" class="button"><span>View more</span></a>
+                                <a href="<?php echo esc_url(home_url('/voice/')); ?>" class="button"><span>View more</span></a>
                             </div>
                         <?php
                         endwhile;

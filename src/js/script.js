@@ -257,9 +257,7 @@ jQuery(function ($) {
         ================================================================ */
         jQuery(".button--form").click(function () {
             jQuery(".wpcf7-form-control-wrap").addClass("is-show");
-          });
-
-
+        });
 
 });
 
