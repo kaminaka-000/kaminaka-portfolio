@@ -191,6 +191,13 @@ const browserSyncReload = (done) => {
 const clean = () => {
   return del([destPath.all, destWpPath.all], { force: true });
 };
+
+// admin-styles.cssの再生成
+const adminStyles = () => {
+  return src("src/css/admin-styles.css")
+  .pipe(dest(destWpPath.css));
+};
+
 // ファイルの監視
 const watchFiles = () => {
   watch(srcPath.css, series(cssSass, browserSyncReload));
@@ -204,4 +211,4 @@ const watchFiles = () => {
 exports.default = series(series(cssSass, jsBabel, imgImagemin, htmlCopy), parallel(watchFiles, browserSyncFunc));
 
 // 本番用タスク
-exports.build = series(clean, cssSass, jsBabel, imgImagemin, htmlCopy);
+exports.build = series(clean, cssSass, jsBabel, imgImagemin, htmlCopy, adminStyles);
