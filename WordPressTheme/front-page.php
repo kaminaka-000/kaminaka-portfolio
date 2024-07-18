@@ -274,11 +274,11 @@
           $custom_query = new WP_Query($args);
 
           if ($custom_query->have_posts()) : ?>
-            <ul class="voice__testimonial-list testimonial-list">
+            <div class="voice__testimonial-list testimonial-list">
               <?php
               while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
-              <li class="testimonial-list__item testimonial-item">
+              <a href="<?php echo esc_url(home_url('/voice/')); ?>" class="testimonial-list__item testimonial-item">
                 <div class="testimonial-item__box">
                   <div class="testimonial-item__layout">
                     <div class="testimonial-item__group">
@@ -333,9 +333,9 @@
                   echo nl2br(esc_html($text));
                   ?>
                 </p>
-              </li>
+              </a>
               <?php endwhile; ?>
-            </ul>
+            </div>
             <div class="voice__button">
               <a href="<?php echo esc_url(home_url('/voice/')); ?>" class="button"><span>View more</span></a>
             </div>

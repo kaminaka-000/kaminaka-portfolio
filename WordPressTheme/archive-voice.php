@@ -35,7 +35,7 @@
 
             <ul class="sub-voice__testimonial-list testimonial-list">
               <?php while (have_posts()) : the_post(); ?>
-                <li class="testimonial-list__item testimonial-item">
+                <li class="testimonial-list__item testimonial-item testimonial-item--sub">
                   <div class="testimonial-item__box">
                     <div class="testimonial-item__layout">
                       <div class="testimonial-item__group">

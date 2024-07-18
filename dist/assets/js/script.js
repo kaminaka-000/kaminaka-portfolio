@@ -93,7 +93,25 @@ jQuery(function ($) {
     navigation: {
       nextEl: ".campaign__prev",
       prevEl: ".campaign__next"
+    },
+    autoplay: {
+      delay: 5000,
+      // 5秒ごとにスライド
+      disableOnInteraction: true // ユーザーが操作したら自動再生を停止する
     }
+  });
+
+  // ユーザー操作後に一定時間経過で再開するカスタムコード
+  swiper.el.addEventListener('mouseenter', function () {
+    swiper.autoplay.stop();
+  });
+  swiper.el.addEventListener('mouseleave', function () {
+    swiper.autoplay.start();
+  });
+  swiper.on('touchEnd', function () {
+    setTimeout(function () {
+      swiper.autoplay.start();
+    }, 5000); // 5秒後に自動再生を再開
   });
 
   /*================================================================

@@ -2762,12 +2762,6 @@ footer.footer.top-footer--not-found {
 	padding: 0.9375rem 1rem 1.5rem 1rem;
 }
 
-.testimonial-item:hover {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-}
-
 .testimonial-item + .testimonial-item {
 	margin-top: 2.5rem;
 }
@@ -4155,7 +4149,15 @@ footer.footer.top-footer--not-found {
 .testimonial-item {
 	max-width: calc(50% - 1.875rem * 2/3);
 	padding: 1.5rem;
+	transition: opacity 0.3s ease-in-out;
 	width: 100%;
+}
+
+.testimonial-item:hover {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	opacity: 0.6;
+	user-select: none;
 }
 
 .testimonial-item + .testimonial-item {
@@ -4196,6 +4198,10 @@ footer.footer.top-footer--not-found {
 
 .testimonial-item__text {
 	margin-top: 2.5rem;
+}
+
+.testimonial-item--sub:hover {
+	opacity: 1;
 }
 
 .testimonial-list {
