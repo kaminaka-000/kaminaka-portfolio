@@ -8,6 +8,7 @@
     <?php wp_head(); ?>
   </head>
   <body>
+
     <?php
         $campaign = esc_url(home_url('/campaign/'));
         $information = esc_url(home_url('/information/'));
@@ -156,15 +157,18 @@
                         </div>
                       </a>
                     </li>
-                    <li class="nav__item">
-                      <a href="<?php echo esc_url($price . '#sub-price-license'); ?>">入館料</a>
-                    </li>
-                    <li class="nav__item">
-                      <a href="<?php echo esc_url($price . '#sub-price-experience'); ?>">特別展</a>
-                    </li>
-                    <li class="nav__item">
-                      <a href="<?php echo esc_url($price . '#sub-price-fan'); ?>">年間パスポート</a>
-                    </li>
+                    <?php
+                      // 特定の固定ページの投稿ID
+                      $post_id = 42; // 入館料の固定ページのID
+
+                      // セクションタイトルを取得
+                      $section_titles = get_scf_section_titles($post_id);
+
+                      // 各セクションタイトルを出力
+                      foreach ($section_titles as $section_id => $section_title) {
+                          echo '<li class="nav__item"><a href="' . esc_url($price . '#' . $section_id) . '">' . wp_kses_post($section_title) . '</a></li>';
+                      }
+                      ?>
                   </ul>
                 </div>
               </div>

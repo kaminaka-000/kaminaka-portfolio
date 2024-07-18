@@ -1607,6 +1607,10 @@ footer.footer.top-footer--not-found {
 	text-align: center;
 }
 
+.info-card--sub:hover {
+	transform: none;
+}
+
 .info-tab__item {
 	border: 1px solid #1E465A;
 	display: none;
@@ -1764,7 +1768,6 @@ footer.footer.top-footer--not-found {
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 20.3125rem;
 	max-width: 22rem;
 	overflow: scroll;
 	padding: 0 0.9375rem;
@@ -3524,6 +3527,7 @@ footer.footer.top-footer--not-found {
 .gallery-item {
 	grid-column: span 5;
 	grid-row: span 1;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .gallery-item:nth-of-type(6n+1),
@@ -3536,9 +3540,17 @@ footer.footer.top-footer--not-found {
 	aspect-ratio: 520/321;
 }
 
+.gallery-item img:hover {
+	opacity: 0.6;
+}
+
 .gallery-item:nth-of-type(6n+1) img,
 .gallery-item:nth-of-type(6n+6) img {
 	aspect-ratio: 300/454;
+}
+
+.gallery-item__modal .gallery-item__content img {
+	opacity: 1;
 }
 
 .gallery-list {
@@ -3710,6 +3722,10 @@ footer.footer.top-footer--not-found {
 	font-weight: 400;
 	line-height: 1.5;
 	margin-top: 1.5rem;
+}
+
+.info-card--sub:hover .info-card__img img {
+	transform: none;
 }
 
 .info-tab__item {

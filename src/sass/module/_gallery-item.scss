@@ -5,6 +5,7 @@
     @include mq(md) {
         grid-column: span 5;
         grid-row: span 1;
+        transition: opacity 0.3s ease-in-out;
     }
 }
 
@@ -23,6 +24,13 @@
     object-fit: cover;
     @include mq(md){
         aspect-ratio: 520/321;
+    }
+}
+
+
+.gallery-item img:hover {
+    @include mq(md){
+        opacity: 0.6;
     }
 }
 
@@ -64,4 +72,9 @@
     top: 0;
 }
 
+.gallery-item__modal .gallery-item__content img {
+    @include mq(md){
+        opacity: 1;
+    }
+}
 

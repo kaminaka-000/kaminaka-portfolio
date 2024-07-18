@@ -9,8 +9,8 @@
           </div>
           <div class="sub-mv__img">
             <picture>
-              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/sitemap-mv-pc.jpeg"/>
-              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sitemap-mv.jpeg" alt="写真:サンゴ礁の上を泳ぐカラフルな熱帯魚の群れ。" />
+              <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/conditions.jpeg"/>
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/conditions-sp.jpeg" alt="写真:青と白の抽象画。ダイナミックな筆致が青と白の濃淡を表現し、エネルギッシュで動きのある印象を与える。テクスチャーが強調され、色のコントラストが際立つ美しいアートワーク。" />
             </picture>
           </div>
         </div>

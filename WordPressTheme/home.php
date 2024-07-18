@@ -39,7 +39,7 @@
                       <time class="card__meta" datetime="<?php echo esc_attr(get_the_time('c')); ?>"><?php echo esc_html(get_the_time('Y.m.d')); ?></time>
                       <h2 class="card__title"><?php echo esc_html(get_the_title()); ?></h2>
                       <p class="card__text">
-                        <?php echo esc_html(wp_trim_words(get_the_excerpt(), 85, '')); ?>
+                        <?php echo esc_html(wp_trim_words(get_the_excerpt(), 85, '...')); ?>
                       </p>
                     </div>
                   </a>

@@ -1,7 +1,7 @@
 <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_2248_12989)">
-<circle cx="44" cy="40" r="39.5" transform="rotate(-90 44 40)" stroke="#408F95"/>
-<path d="M46 60V20L40 27" stroke="#408F95" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="44" cy="40" r="39.5" transform="rotate(-90 44 40)" stroke="#1E465A"/>
+<path d="M46 60V20L40 27" stroke="#1E465A" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
 <filter id="filter0_d_2248_12989" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

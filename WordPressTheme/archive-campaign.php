@@ -43,7 +43,7 @@
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                 <li class="sub-cards__info-card">
-                    <div class="info-card">
+                    <div class="info-card info-card--sub">
                     <!-- アイキャッチ画像の表示 -->
                     <div class="info-card__img">
                         <?php

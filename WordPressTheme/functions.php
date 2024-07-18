@@ -14,6 +14,9 @@ function my_theme_enqueue_scripts() {
   // New Google Font: Lora
   wp_enqueue_style('google-fonts-lora', 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap', array(), null);
 
+  // Animate.css
+  wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), null);
+
   // Swiper CSS
   wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
 
@@ -26,16 +29,22 @@ function my_theme_enqueue_scripts() {
   // Swiper JS
   wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery-cdn'), null, true);
 
+  // WOW.js
+  wp_enqueue_script('wow-js', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', array('jquery-cdn'), null, true);
+
   // Custom Scripts
   wp_enqueue_script('my-custom-script', get_theme_file_uri('/assets/js/script.js'), array('jquery-cdn'), null, true);
 
   // jQuery inview Plugin
   wp_enqueue_script('jquery-inview', get_theme_file_uri('/assets/js/jquery.inview.min.js'), array('jquery-cdn'), null, true);
+
+  // WOW.js初期化スクリプトをインラインで追加
+  wp_add_inline_script('wow-js', 'new WOW().init();');
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 
-//セットアップ
+// セットアップ
 function my_setup() {
 	add_theme_support( 'post-thumbnails' ); /* アイキャッチ */
 	add_theme_support( 'automatic-feed-links' ); /* RSSフィード */
@@ -52,6 +61,7 @@ function my_setup() {
 	);
 }
 add_action( 'after_setup_theme', 'my_setup' );
+
 
 /*================================================================
     アーカイブの表示件数変更
@@ -253,7 +263,7 @@ function add_custom_widget() {
   $html .= '<p>クリックすると投稿と編集ページに移動します</p>';
   $html .= '<div class="widget-icons">';
   $html .= '<a href="edit.php"><div class="widget-icon"><span class="dashicons dashicons-admin-post"></span><p>『ブログ』投稿</p></div></a>';
-  $html .= '<a href="edit.php?post_type=campaign"><div class="widget-icon"><span class="dashicons dashicons-clock"></span><p>『キャンペーン』投稿</p></div></a>';
+  $html .= '<a href="edit.php?post_type=campaign"><div class="widget-icon"><span class="dashicons dashicons-clock"></span><p>『作品紹介』投稿</p></div></a>';
   $html .= '<a href="edit.php?post_type=voice"><div class="widget-icon"><span class="dashicons dashicons-smiley"></span><p>『お客様の声』投稿</p></div></a>';
   $html .= '<a href="post.php?post=37&action=edit"><div class="widget-icon"><span class="dashicons dashicons-format-gallery"></span><p>『ギャラリー画像』編集</p></div></a>';
   $html .= '<a href="post.php?post=42&action=edit"><div class="widget-icon"><span class="dashicons dashicons-money-alt"></span><p>『料金一覧』編集</p></div></a>';
@@ -353,7 +363,7 @@ add_filter('menu_order', 'customize_menu_order');
 ================================================================ */
 // ログイン画面のロゴ変更
 function login_logo() {
-  $logo_url = get_template_directory_uri() . '/assets/images/common/contact-logo.svg';
+  $logo_url = get_template_directory_uri() . '/assets/images/common/art-logo2.png';
   echo '<style type="text/css">
       .login h1 a {
           background-image: url("' . esc_url($logo_url) . '");
@@ -455,15 +465,40 @@ function add_custom_js_to_footer() {
 }
 add_action('wp_footer', 'add_custom_js_to_footer');
 
-//
-function get_scf_section_titles() {
-  $license_section_title = SCF::get('license_section_title');
-  $experience_section_title = SCF::get('experience_section_title');
-  $fun_section_title = SCF::get('fun_section_title');
+/*================================================================
+    料金の部分の改行をナビ部分に表示させない
+================================================================ */
+function get_scf_section_titles($post_id) {
+  $license_section_title = SCF::get('license_section_title', $post_id);
+
+  // 改行で分割して最初の部分だけを取得
+  $experience_section_title = SCF::get('experience_section_title', $post_id);
+  $experience_section_title = explode("\n", str_replace("\r", "\n", $experience_section_title))[0];
+
+  $fun_section_title = SCF::get('fun_section_title', $post_id);
+
+  $special_section_title = SCF::get('special_section_title', $post_id);
+  $special_section_title = explode("\n", str_replace("\r", "\n", $special_section_title))[0];
+
 
   return array(
       'sub-price-license' => $license_section_title,
       'sub-price-experience' => $experience_section_title,
-      'sub-price-fan' => $fun_section_title
+      'sub-price-fan' => $fun_section_title,
+      'sub-price-special' => $special_section_title
   );
 }
+
+/*================================================================
+    固定ページでSEO SIMPLE PACKのディスクリプションメタタグを除去する
+================================================================ */
+function remove_duplicate_meta_description() {
+  ob_start(function ($buffer) {
+      // 重複するメタディスクリプションタグを削除
+      $buffer = preg_replace('/<meta name="description" content=".*?">/', '', $buffer, 1);
+      return $buffer;
+  });
+}
+add_action('wp_head', 'remove_duplicate_meta_description', 1);
+
+

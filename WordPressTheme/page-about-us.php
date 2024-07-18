@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="sub-about__body">
-              <p class="sub-about__title">Discover <br/>Art Today</p>
+              <p class="sub-about__title wow animate__animated">Discover <br/>Art Today</p>
               <div class="sub-about__box">
                 <p class="sub-about__text">
                     蓮の池のほとりに位置する蓮池美術館では、静かな水面に映る美しい風景と共に、心に響くアート作品を鑑賞できます。<br>自然とアートの融合を感じながら、新しいインスピレーションを見つけてください。
@@ -91,7 +91,7 @@
                       if ($image_url) {
                           $modal_id = 'modal-' . $index;  // モーダルのIDを生成
                           ?>
-                          <li class="gallery-list__item gallery-item js-modal-open" data-target="<?php echo esc_attr($modal_id); ?>">
+                          <li class="gallery-list__item gallery-item js-modal-open wow animate__animated animate__fadeInDown" data-target="<?php echo esc_attr($modal_id); ?>">
                               <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt_text); ?>" />
                               <div class="gallery-item__modal js-modal" id="<?php echo esc_attr($modal_id); ?>">
                                   <div class="gallery-item__content js-modal-close">

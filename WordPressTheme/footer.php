@@ -138,7 +138,7 @@
                       <a href="<?php echo $information; ?>?tab=tab03">特別展示</a>
                     </li>
                     <li class="nav__item">
-                      <a href="<?php echo $information; ?>?tab=tab02">イベント</a>
+                      <a href="<?php echo $information; ?>?tab=tab02">ワークショップ</a>
                     </li>
                   </ul>
                 </div>
@@ -176,15 +176,17 @@
                       </a>
                     </li>
                     <?php
-            $scf_titles = get_scf_section_titles();
-            if (!empty($scf_titles)) {
-                foreach ($scf_titles as $section_id => $title) {
-                    if (!empty($title)) {
-                        echo '<li class="nav__item"><a href="' . esc_url($price) . '#' . esc_attr($section_id) . '">' . esc_html($title) . '</a></li>';
-                    }
-                }
-            }
-        ?>
+                      // 特定の固定ページの投稿ID
+                      $post_id = 42; // 入館料の固定ページのID
+
+                      // セクションタイトルを取得
+                      $section_titles = get_scf_section_titles($post_id);
+
+                      // 各セクションタイトルを出力
+                      foreach ($section_titles as $section_id => $section_title) {
+                          echo '<li class="nav__item"><a href="' . esc_url($price . '#' . $section_id) . '">' . wp_kses_post($section_title) . '</a></li>';
+                      }
+                      ?>
                   </ul>
                 </div>
               </div>

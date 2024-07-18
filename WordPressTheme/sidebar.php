@@ -135,7 +135,7 @@
                                 <div class="sidebar-card__before">
                                     <span>作者</span>
                                 </div>
-                                <div class="sidebar-card__after"><?php echo esc_html($discount_price ? $discount_price : '準備中'); ?></div>
+                                <div class="sidebar-card__after"><?php echo nl2br(esc_html($discount_price ? $discount_price : '準備中')); ?></div>
                             </div>
                         </div>
                     </div>

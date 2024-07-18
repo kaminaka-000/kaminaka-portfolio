@@ -5,7 +5,7 @@
       <section class="sub-mv">
         <div class="sub-mv__inner">
           <div class="sub-mv__header">
-            <h1 class="sub-mv__title">Campaign</h1>
+            <h1 class="sub-mv__title">Art</h1>
           </div>
           <div class="sub-mv__img">
             <picture>

@@ -79,7 +79,7 @@
         <section class="campaign top-campaign">
           <div class="campaign__inner">
             <div class="campaign__title heading">
-              <p class="heading__engtitle">Art</p>
+              <p class="heading__engtitle wow animate__animated animate__fadeInUp">Art</p>
               <h2 class="heading__jatitle">作品紹介</h2>
             </div>
             <?php if ($custom_query->have_posts()) : ?>
@@ -87,7 +87,7 @@
                 <ul class="swiper-wrapper campaign__cards-wrapper">
                   <?php while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
                   <li class="swiper-slide campaign__cards-info-card">
-                    <div class="info-card">
+                    <a href="<?php echo esc_url(home_url('/campaign/')); ?>" class="info-card">
                       <div class="info-card__img">
                         <?php
                         if (has_post_thumbnail()) {
@@ -127,7 +127,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <?php endwhile; ?>
                 </ul>
@@ -153,7 +153,7 @@
         <div class="about__inner">
           <div class="about__content">
             <div class="about__title heading">
-              <p class="heading__engtitle">About us</p>
+              <p class="heading__engtitle wow animate__animated animate__fadeInUp">About us</p>
               <h2 class="heading__jatitle">当館について</h2>
             </div>
             <div class="about__image-design image-design">
@@ -185,7 +185,7 @@
       <section class="information top-information">
         <div class="information__inner inner">
           <div class="information__title heading">
-            <p class="heading__engtitle">Information</p>
+            <p class="heading__engtitle wow animate__animated animate__fadeInUp">Information</p>
             <h2 class="heading__jatitle">展示情報</h2>
           </div>
           <div class="information__course course">
@@ -210,7 +210,7 @@
       <section class="blog top-blog">
         <div class="blog__inner">
           <div class="blog__title heading heading--blog">
-            <p class="heading__engtitle heading__engtitle--blog">Blog</p>
+            <p class="heading__engtitle heading__engtitle--blog wow animate__animated animate__fadeInUp">Blog</p>
             <h2 class="heading__jatitle heading__jatitle--blog">ブログ</h2>
           </div>
 
@@ -262,7 +262,7 @@
       <section class="voice top-voice">
         <div class="voice__inner inner">
           <div class="voice__title heading">
-            <p class="heading__engtitle">Voice</p>
+            <p class="heading__engtitle wow animate__animated animate__fadeInUp">Voice</p>
             <h2 class="heading__jatitle">お客様の声</h2>
           </div>
 
@@ -307,7 +307,7 @@
                     <h3 class="testimonial-item__title">
                       <?php
                       $title = get_the_title();
-                      echo esc_html(mb_substr($title, 0, 21));
+                      echo esc_html($title);
                       ?>
                     </h3>
                   </div>
@@ -330,8 +330,7 @@
                 <p class="testimonial-item__text">
                   <?php
                   $text = get_field('voice-text');
-                  $trimmed_text = mb_substr($text, 0, 173);
-                  echo nl2br(esc_html($trimmed_text));
+                  echo nl2br(esc_html($text));
                   ?>
                 </p>
               </li>
@@ -353,7 +352,7 @@
       <section class="price top-price">
         <div class="price__inner inner">
             <div class="price__title heading">
-                <p class="heading__engtitle">Price</p>
+                <p class="heading__engtitle wow animate__animated animate__fadeInUp">Price</p>
                 <h2 class="heading__jatitle">料金一覧</h2>
             </div>
             <div class="price__content">

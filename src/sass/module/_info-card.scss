@@ -185,4 +185,13 @@
   text-align: center;
 }
 
+.info-card--sub:hover {
+  transform: none;
+}
 
+//modifier
+.info-card--sub:hover .info-card__img img {
+  @include mq(md) {
+    transform: none;
+  }
+}
